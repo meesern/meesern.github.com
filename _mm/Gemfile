@@ -2,4 +2,5 @@ source "http://rubygems.org"
 gem "middleman"
 gem "middleman-blog"
 gem "rack-codehighlighter"
+gem "compass-susy-plugin"
 
