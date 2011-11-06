@@ -1,9 +1,11 @@
 activate :blog
-  set :blog_permalink, ":year/:month/:title.html"
+set :blog_permalink, ":year/:month/:title.html"
 # set :blog_summary_separator, /READMORE/
 # set :blog_summary_length, 500
+set :markdown, :layout_engine => :erb
 
 page "/feed.xml", :layout => false
+#page "/2*", :layout => "layout-article"
 
 # Build-specific configuration
 configure :build do
