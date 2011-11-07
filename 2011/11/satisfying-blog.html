@@ -133,6 +133,8 @@ compass create . -r susy -u susy
 <p>Next comes the layout. Elastic vertical grid layout is the gold standard of web design and notoriously difficult to manage across a range of hideous browser issues. <a href="http://susy.oddbird.net/tutorial/">Susy</a> which is included with Middleman makes the whole problem simple (once I’d figured out what it was all about)! This blog is based on a twelve column grid of 5em each with 1em gutters and 1em side margins.</p>
 
 <h2 id="type">Type</h2>
+
+<p>Middleman also supports <a href="http://compass-style.org/">compass</a>- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way. On lovely aspect of compass is support for vertical rhythm.</p>
     </div>
   </article><div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
@@ -168,7 +170,7 @@ compass create . -r susy -u susy
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="js/plugins.js"></script><script defer src="js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
     window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

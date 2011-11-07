@@ -1,24 +1,29 @@
 /*
-Syntax error: Invalid CSS after "...ertical_rhythm"": expected selector or at-rule, was "$base-font-size..."
+Syntax error: Invalid CSS after "$base-font-size   ": expected ":", was "16px"
         on line 105 of /sandbox/meesern.github.com/_mm/source/css/mine.css.scss
 
 100: /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 101: 
 102: /* Vertical Rhythm */
-103: @import "compass/typography/vertical_rhythm"
+103: //@import "compass/typography/vertical_rhythm"
 104: 
 105: $base-font-size   16px
 106: $base-line-height 24px
 107: 
-108: body {
-109:     @include establish-baseline;
-110: }
+108: //body {
+109: //    @include establish-baseline;
+110: //}
 
 Backtrace:
 /sandbox/meesern.github.com/_mm/source/css/mine.css.scss:105
 /Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:926:in `expected'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:872:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:29:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:867:in `tok!'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:350:in `variable'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:395:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:388:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:59:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:28:in `parse'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:327:in `_to_tree'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:300:in `_render'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:247:in `render'
@@ -90,4 +95,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...ertical_rhythm\"\": expected selector or at-rule, was \"$base-font-size...\"\A         on line 105 of /sandbox/meesern.github.com/_mm/source/css/mine.css.scss\A \A 100: /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/\A 101: \A 102: /* Vertical Rhythm */\A 103: @import \"compass/typography/vertical_rhythm\"\A 104: \A 105: $base-font-size   16px\A 106: $base-line-height 24px\A 107: \A 108: body {\A 109:     @include establish-baseline;\A 110: }"; }
+  content: "Syntax error: Invalid CSS after \"$base-font-size   \": expected \":\", was \"16px\"\A         on line 105 of /sandbox/meesern.github.com/_mm/source/css/mine.css.scss\A \A 100: /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/\A 101: \A 102: /* Vertical Rhythm */\A 103: //@import \"compass/typography/vertical_rhythm\"\A 104: \A 105: $base-font-size   16px\A 106: $base-line-height 24px\A 107: \A 108: //body {\A 109: //    @include establish-baseline;\A 110: //}"; }
