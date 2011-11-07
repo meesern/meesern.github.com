@@ -1,98 +1,395 @@
-/*
-Syntax error: Invalid CSS after "$base-font-size   ": expected ":", was "16px"
-        on line 105 of /sandbox/meesern.github.com/_mm/source/css/mine.css.scss
-
-100: /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
-101: 
-102: /* Vertical Rhythm */
-103: //@import "compass/typography/vertical_rhythm"
-104: 
-105: $base-font-size   16px
-106: $base-line-height 24px
-107: 
-108: //body {
-109: //    @include establish-baseline;
-110: //}
-
-Backtrace:
-/sandbox/meesern.github.com/_mm/source/css/mine.css.scss:105
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:926:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:872:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:867:in `tok!'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:350:in `variable'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:395:in `block_child'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:388:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:59:in `stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/scss/parser.rb:28:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:327:in `_to_tree'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:300:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.10/lib/sass/../sass/engine.rb:247:in `render'
-/Library/Ruby/Gems/1.8/gems/tilt-1.3.3/lib/tilt/css.rb:24:in `evaluate'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/renderers/sass.rb:33:in `evaluate'
-/Library/Ruby/Gems/1.8/gems/tilt-1.3.3/lib/tilt/template.rb:76:in `render'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:625:in `render'
-/Library/Ruby/Gems/1.8/gems/padrino-core-0.10.5/lib/padrino-core/application/rendering.rb:195:in `render'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/base.rb:193:in `process_request'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/base.rb:83:in `ERROR (?-mix:)'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:1211:in `call'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:1211:in `compile!'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:821:in `[]'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:821:in `process_route'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:819:in `catch'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:819:in `process_route'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:920:in `error_block!'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:707:in `call!'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:871:in `invoke'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:871:in `catch'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:871:in `invoke'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:707:in `call!'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:692:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.3.5/lib/rack/urlmap.rb:52:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.3.5/lib/rack/urlmap.rb:46:in `each'
-/Library/Ruby/Gems/1.8/gems/rack-1.3.5/lib/rack/urlmap.rb:46:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-codehighlighter-0.5.0/lib/rack/codehighlighter.rb:25:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-1.3.5/lib/rack/head.rb:9:in `call'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:1334:in `call'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:1403:in `synchronize'
-/Library/Ruby/Gems/1.8/gems/sinatra-1.3.1/lib/sinatra/base.rb:1334:in `call'
-/Library/Ruby/Gems/1.8/gems/rack-test-0.6.1/lib/rack/mock_session.rb:30:in `request'
-/Library/Ruby/Gems/1.8/gems/rack-test-0.6.1/lib/rack/test.rb:219:in `process_request'
-/Library/Ruby/Gems/1.8/gems/rack-test-0.6.1/lib/rack/test.rb:57:in `get'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:24:in `tilt_template'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:178:in `handle_path'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:237:in `handle_directory'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:231:in `each'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:231:in `handle_directory'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:233:in `handle_directory'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:231:in `each'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:231:in `handle_directory'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:242:in `execute!'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:157:in `invoke!'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:206:in `invoke!'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/actions.rb:95:in `action'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/builder.rb:120:in `build_all_files'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/task.rb:22:in `send'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/cli.rb:65:in `map'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/core_ext/ordered_hash.rb:75:in `each'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `map'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/invocation.rb:124:in `invoke_all'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/lib/middleman/cli.rb:65:in `build'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/task.rb:22:in `send'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/task.rb:22:in `run'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/invocation.rb:118:in `invoke_task'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor.rb:263:in `dispatch'
-/Library/Ruby/Gems/1.8/gems/thor-0.14.6/lib/thor/base.rb:389:in `start'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/bin/middleman:52:in `start_cli!'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/bin/middleman:47:in `did_locate_middleman_project'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/bin/middleman:20:in `locate_middleman_root!'
-/Library/Ruby/Gems/1.8/gems/middleman-2.0.13.1/bin/middleman:70
-/usr/bin/middleman:19:in `load'
-/usr/bin/middleman:19
+/*@import "compass";
+#main {
+  @include float-left;
+  border: 1px solid black;
+  @include border-radius(5px); }
+#sidebar {
+  @include float-right;
+  @include box-shadow(black 0 1px 2px); }
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"$base-font-size   \": expected \":\", was \"16px\"\A         on line 105 of /sandbox/meesern.github.com/_mm/source/css/mine.css.scss\A \A 100: /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/\A 101: \A 102: /* Vertical Rhythm */\A 103: //@import \"compass/typography/vertical_rhythm\"\A 104: \A 105: $base-font-size   16px\A 106: $base-line-height 24px\A 107: \A 108: //body {\A 109: //    @include establish-baseline;\A 110: //}"; }
+/* ~~~~~~~~~ Layout ~~~~~~~~~~~~*/
+/* Set the base grid */
+/*includes susy*/
+#container {
+  *zoom: 1;
+  margin: auto;
+  width: 73em;
+  max-width: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.37%, rgba(0, 0, 0, 0)), color-stop(1.37%, rgba(100, 100, 225, 0.25)), color-stop(8.219%, rgba(100, 100, 225, 0.25)), color-stop(8.219%, rgba(0, 0, 0, 0)), color-stop(9.589%, rgba(0, 0, 0, 0)), color-stop(9.589%, rgba(100, 100, 225, 0.25)), color-stop(16.438%, rgba(100, 100, 225, 0.25)), color-stop(16.438%, rgba(0, 0, 0, 0)), color-stop(17.808%, rgba(0, 0, 0, 0)), color-stop(17.808%, rgba(100, 100, 225, 0.25)), color-stop(24.658%, rgba(100, 100, 225, 0.25)), color-stop(24.658%, rgba(0, 0, 0, 0)), color-stop(26.027%, rgba(0, 0, 0, 0)), color-stop(26.027%, rgba(100, 100, 225, 0.25)), color-stop(32.877%, rgba(100, 100, 225, 0.25)), color-stop(32.877%, rgba(0, 0, 0, 0)), color-stop(34.247%, rgba(0, 0, 0, 0)), color-stop(34.247%, rgba(100, 100, 225, 0.25)), color-stop(41.096%, rgba(100, 100, 225, 0.25)), color-stop(41.096%, rgba(0, 0, 0, 0)), color-stop(42.466%, rgba(0, 0, 0, 0)), color-stop(42.466%, rgba(100, 100, 225, 0.25)), color-stop(49.315%, rgba(100, 100, 225, 0.25)), color-stop(49.315%, rgba(0, 0, 0, 0)), color-stop(50.685%, rgba(0, 0, 0, 0)), color-stop(50.685%, rgba(100, 100, 225, 0.25)), color-stop(57.534%, rgba(100, 100, 225, 0.25)), color-stop(57.534%, rgba(0, 0, 0, 0)), color-stop(58.904%, rgba(0, 0, 0, 0)), color-stop(58.904%, rgba(100, 100, 225, 0.25)), color-stop(65.753%, rgba(100, 100, 225, 0.25)), color-stop(65.753%, rgba(0, 0, 0, 0)), color-stop(67.123%, rgba(0, 0, 0, 0)), color-stop(67.123%, rgba(100, 100, 225, 0.25)), color-stop(73.973%, rgba(100, 100, 225, 0.25)), color-stop(73.973%, rgba(0, 0, 0, 0)), color-stop(75.342%, rgba(0, 0, 0, 0)), color-stop(75.342%, rgba(100, 100, 225, 0.25)), color-stop(82.192%, rgba(100, 100, 225, 0.25)), color-stop(82.192%, rgba(0, 0, 0, 0)), color-stop(83.562%, rgba(0, 0, 0, 0)), color-stop(83.562%, rgba(100, 100, 225, 0.25)), color-stop(90.411%, rgba(100, 100, 225, 0.25)), color-stop(90.411%, rgba(0, 0, 0, 0)), color-stop(91.781%, rgba(0, 0, 0, 0)), color-stop(91.781%, rgba(100, 100, 225, 0.25)), color-stop(98.63%, rgba(100, 100, 225, 0.25)), color-stop(98.63%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.37%, rgba(100, 100, 225, 0.25) 1.37%, rgba(100, 100, 225, 0.25) 8.219%, rgba(0, 0, 0, 0) 8.219%, rgba(0, 0, 0, 0) 9.589%, rgba(100, 100, 225, 0.25) 9.589%, rgba(100, 100, 225, 0.25) 16.438%, rgba(0, 0, 0, 0) 16.438%, rgba(0, 0, 0, 0) 17.808%, rgba(100, 100, 225, 0.25) 17.808%, rgba(100, 100, 225, 0.25) 24.658%, rgba(0, 0, 0, 0) 24.658%, rgba(0, 0, 0, 0) 26.027%, rgba(100, 100, 225, 0.25) 26.027%, rgba(100, 100, 225, 0.25) 32.877%, rgba(0, 0, 0, 0) 32.877%, rgba(0, 0, 0, 0) 34.247%, rgba(100, 100, 225, 0.25) 34.247%, rgba(100, 100, 225, 0.25) 41.096%, rgba(0, 0, 0, 0) 41.096%, rgba(0, 0, 0, 0) 42.466%, rgba(100, 100, 225, 0.25) 42.466%, rgba(100, 100, 225, 0.25) 49.315%, rgba(0, 0, 0, 0) 49.315%, rgba(0, 0, 0, 0) 50.685%, rgba(100, 100, 225, 0.25) 50.685%, rgba(100, 100, 225, 0.25) 57.534%, rgba(0, 0, 0, 0) 57.534%, rgba(0, 0, 0, 0) 58.904%, rgba(100, 100, 225, 0.25) 58.904%, rgba(100, 100, 225, 0.25) 65.753%, rgba(0, 0, 0, 0) 65.753%, rgba(0, 0, 0, 0) 67.123%, rgba(100, 100, 225, 0.25) 67.123%, rgba(100, 100, 225, 0.25) 73.973%, rgba(0, 0, 0, 0) 73.973%, rgba(0, 0, 0, 0) 75.342%, rgba(100, 100, 225, 0.25) 75.342%, rgba(100, 100, 225, 0.25) 82.192%, rgba(0, 0, 0, 0) 82.192%, rgba(0, 0, 0, 0) 83.562%, rgba(100, 100, 225, 0.25) 83.562%, rgba(100, 100, 225, 0.25) 90.411%, rgba(0, 0, 0, 0) 90.411%, rgba(0, 0, 0, 0) 91.781%, rgba(100, 100, 225, 0.25) 91.781%, rgba(100, 100, 225, 0.25) 98.63%, rgba(0, 0, 0, 0) 98.63%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.37%, rgba(100, 100, 225, 0.25) 1.37%, rgba(100, 100, 225, 0.25) 8.219%, rgba(0, 0, 0, 0) 8.219%, rgba(0, 0, 0, 0) 9.589%, rgba(100, 100, 225, 0.25) 9.589%, rgba(100, 100, 225, 0.25) 16.438%, rgba(0, 0, 0, 0) 16.438%, rgba(0, 0, 0, 0) 17.808%, rgba(100, 100, 225, 0.25) 17.808%, rgba(100, 100, 225, 0.25) 24.658%, rgba(0, 0, 0, 0) 24.658%, rgba(0, 0, 0, 0) 26.027%, rgba(100, 100, 225, 0.25) 26.027%, rgba(100, 100, 225, 0.25) 32.877%, rgba(0, 0, 0, 0) 32.877%, rgba(0, 0, 0, 0) 34.247%, rgba(100, 100, 225, 0.25) 34.247%, rgba(100, 100, 225, 0.25) 41.096%, rgba(0, 0, 0, 0) 41.096%, rgba(0, 0, 0, 0) 42.466%, rgba(100, 100, 225, 0.25) 42.466%, rgba(100, 100, 225, 0.25) 49.315%, rgba(0, 0, 0, 0) 49.315%, rgba(0, 0, 0, 0) 50.685%, rgba(100, 100, 225, 0.25) 50.685%, rgba(100, 100, 225, 0.25) 57.534%, rgba(0, 0, 0, 0) 57.534%, rgba(0, 0, 0, 0) 58.904%, rgba(100, 100, 225, 0.25) 58.904%, rgba(100, 100, 225, 0.25) 65.753%, rgba(0, 0, 0, 0) 65.753%, rgba(0, 0, 0, 0) 67.123%, rgba(100, 100, 225, 0.25) 67.123%, rgba(100, 100, 225, 0.25) 73.973%, rgba(0, 0, 0, 0) 73.973%, rgba(0, 0, 0, 0) 75.342%, rgba(100, 100, 225, 0.25) 75.342%, rgba(100, 100, 225, 0.25) 82.192%, rgba(0, 0, 0, 0) 82.192%, rgba(0, 0, 0, 0) 83.562%, rgba(100, 100, 225, 0.25) 83.562%, rgba(100, 100, 225, 0.25) 90.411%, rgba(0, 0, 0, 0) 90.411%, rgba(0, 0, 0, 0) 91.781%, rgba(100, 100, 225, 0.25) 91.781%, rgba(100, 100, 225, 0.25) 98.63%, rgba(0, 0, 0, 0) 98.63%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 1.37%, rgba(100, 100, 225, 0.25) 1.37%, rgba(100, 100, 225, 0.25) 8.219%, rgba(0, 0, 0, 0) 8.219%, rgba(0, 0, 0, 0) 9.589%, rgba(100, 100, 225, 0.25) 9.589%, rgba(100, 100, 225, 0.25) 16.438%, rgba(0, 0, 0, 0) 16.438%, rgba(0, 0, 0, 0) 17.808%, rgba(100, 100, 225, 0.25) 17.808%, rgba(100, 100, 225, 0.25) 24.658%, rgba(0, 0, 0, 0) 24.658%, rgba(0, 0, 0, 0) 26.027%, rgba(100, 100, 225, 0.25) 26.027%, rgba(100, 100, 225, 0.25) 32.877%, rgba(0, 0, 0, 0) 32.877%, rgba(0, 0, 0, 0) 34.247%, rgba(100, 100, 225, 0.25) 34.247%, rgba(100, 100, 225, 0.25) 41.096%, rgba(0, 0, 0, 0) 41.096%, rgba(0, 0, 0, 0) 42.466%, rgba(100, 100, 225, 0.25) 42.466%, rgba(100, 100, 225, 0.25) 49.315%, rgba(0, 0, 0, 0) 49.315%, rgba(0, 0, 0, 0) 50.685%, rgba(100, 100, 225, 0.25) 50.685%, rgba(100, 100, 225, 0.25) 57.534%, rgba(0, 0, 0, 0) 57.534%, rgba(0, 0, 0, 0) 58.904%, rgba(100, 100, 225, 0.25) 58.904%, rgba(100, 100, 225, 0.25) 65.753%, rgba(0, 0, 0, 0) 65.753%, rgba(0, 0, 0, 0) 67.123%, rgba(100, 100, 225, 0.25) 67.123%, rgba(100, 100, 225, 0.25) 73.973%, rgba(0, 0, 0, 0) 73.973%, rgba(0, 0, 0, 0) 75.342%, rgba(100, 100, 225, 0.25) 75.342%, rgba(100, 100, 225, 0.25) 82.192%, rgba(0, 0, 0, 0) 82.192%, rgba(0, 0, 0, 0) 83.562%, rgba(100, 100, 225, 0.25) 83.562%, rgba(100, 100, 225, 0.25) 90.411%, rgba(0, 0, 0, 0) 90.411%, rgba(0, 0, 0, 0) 91.781%, rgba(100, 100, 225, 0.25) 91.781%, rgba(100, 100, 225, 0.25) 98.63%, rgba(0, 0, 0, 0) 98.63%, rgba(0, 0, 0, 0) 100%);
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 1.37%, rgba(100, 100, 225, 0.25) 1.37%, rgba(100, 100, 225, 0.25) 8.219%, rgba(0, 0, 0, 0) 8.219%, rgba(0, 0, 0, 0) 9.589%, rgba(100, 100, 225, 0.25) 9.589%, rgba(100, 100, 225, 0.25) 16.438%, rgba(0, 0, 0, 0) 16.438%, rgba(0, 0, 0, 0) 17.808%, rgba(100, 100, 225, 0.25) 17.808%, rgba(100, 100, 225, 0.25) 24.658%, rgba(0, 0, 0, 0) 24.658%, rgba(0, 0, 0, 0) 26.027%, rgba(100, 100, 225, 0.25) 26.027%, rgba(100, 100, 225, 0.25) 32.877%, rgba(0, 0, 0, 0) 32.877%, rgba(0, 0, 0, 0) 34.247%, rgba(100, 100, 225, 0.25) 34.247%, rgba(100, 100, 225, 0.25) 41.096%, rgba(0, 0, 0, 0) 41.096%, rgba(0, 0, 0, 0) 42.466%, rgba(100, 100, 225, 0.25) 42.466%, rgba(100, 100, 225, 0.25) 49.315%, rgba(0, 0, 0, 0) 49.315%, rgba(0, 0, 0, 0) 50.685%, rgba(100, 100, 225, 0.25) 50.685%, rgba(100, 100, 225, 0.25) 57.534%, rgba(0, 0, 0, 0) 57.534%, rgba(0, 0, 0, 0) 58.904%, rgba(100, 100, 225, 0.25) 58.904%, rgba(100, 100, 225, 0.25) 65.753%, rgba(0, 0, 0, 0) 65.753%, rgba(0, 0, 0, 0) 67.123%, rgba(100, 100, 225, 0.25) 67.123%, rgba(100, 100, 225, 0.25) 73.973%, rgba(0, 0, 0, 0) 73.973%, rgba(0, 0, 0, 0) 75.342%, rgba(100, 100, 225, 0.25) 75.342%, rgba(100, 100, 225, 0.25) 82.192%, rgba(0, 0, 0, 0) 82.192%, rgba(0, 0, 0, 0) 83.562%, rgba(100, 100, 225, 0.25) 83.562%, rgba(100, 100, 225, 0.25) 90.411%, rgba(0, 0, 0, 0) 90.411%, rgba(0, 0, 0, 0) 91.781%, rgba(100, 100, 225, 0.25) 91.781%, rgba(100, 100, 225, 0.25) 98.63%, rgba(0, 0, 0, 0) 98.63%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 1.37%, rgba(100, 100, 225, 0.25) 1.37%, rgba(100, 100, 225, 0.25) 8.219%, rgba(0, 0, 0, 0) 8.219%, rgba(0, 0, 0, 0) 9.589%, rgba(100, 100, 225, 0.25) 9.589%, rgba(100, 100, 225, 0.25) 16.438%, rgba(0, 0, 0, 0) 16.438%, rgba(0, 0, 0, 0) 17.808%, rgba(100, 100, 225, 0.25) 17.808%, rgba(100, 100, 225, 0.25) 24.658%, rgba(0, 0, 0, 0) 24.658%, rgba(0, 0, 0, 0) 26.027%, rgba(100, 100, 225, 0.25) 26.027%, rgba(100, 100, 225, 0.25) 32.877%, rgba(0, 0, 0, 0) 32.877%, rgba(0, 0, 0, 0) 34.247%, rgba(100, 100, 225, 0.25) 34.247%, rgba(100, 100, 225, 0.25) 41.096%, rgba(0, 0, 0, 0) 41.096%, rgba(0, 0, 0, 0) 42.466%, rgba(100, 100, 225, 0.25) 42.466%, rgba(100, 100, 225, 0.25) 49.315%, rgba(0, 0, 0, 0) 49.315%, rgba(0, 0, 0, 0) 50.685%, rgba(100, 100, 225, 0.25) 50.685%, rgba(100, 100, 225, 0.25) 57.534%, rgba(0, 0, 0, 0) 57.534%, rgba(0, 0, 0, 0) 58.904%, rgba(100, 100, 225, 0.25) 58.904%, rgba(100, 100, 225, 0.25) 65.753%, rgba(0, 0, 0, 0) 65.753%, rgba(0, 0, 0, 0) 67.123%, rgba(100, 100, 225, 0.25) 67.123%, rgba(100, 100, 225, 0.25) 73.973%, rgba(0, 0, 0, 0) 73.973%, rgba(0, 0, 0, 0) 75.342%, rgba(100, 100, 225, 0.25) 75.342%, rgba(100, 100, 225, 0.25) 82.192%, rgba(0, 0, 0, 0) 82.192%, rgba(0, 0, 0, 0) 83.562%, rgba(100, 100, 225, 0.25) 83.562%, rgba(100, 100, 225, 0.25) 90.411%, rgba(0, 0, 0, 0) 90.411%, rgba(0, 0, 0, 0) 91.781%, rgba(100, 100, 225, 0.25) 91.781%, rgba(100, 100, 225, 0.25) 98.63%, rgba(0, 0, 0, 0) 98.63%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top; }
+  #container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+header {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+  padding-left: 24.658%; }
+
+#main {
+  display: inline;
+  float: left;
+  width: 72.603%;
+  margin-right: 1.37%;
+  margin-left: 1.37%; }
+  #main .post {
+    padding-left: 33.962%; }
+    #main .post article {
+      display: inline;
+      float: left;
+      width: 100%;
+      margin-right: 1.887%; }
+    #main .post .comments {
+      display: inline;
+      float: left;
+      width: 100%;
+      margin-right: 1.887%; }
+
+aside {
+  display: inline;
+  float: left;
+  width: 23.288%;
+  margin-right: 1.37%;
+  display: inline;
+  float: right;
+  margin-right: 1.37%;
+  #margin-left: -1em; }
+
+footer {
+  clear: both;
+  margin-left: 1.37%;
+  margin-right: 1.37%;
+  padding-left: 24.658%;
+  padding-right: 24.658%; }
+
+/*~~~~~~~~~~~~~ Colour ~~~~~~~~~~*/
+/* light is default mode, so pair with general html definition */
+html, .light {
+  background-color: #fdf6e3;
+  color: #657b83; }
+  html *, .light * {
+    color: #657b83; }
+  html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: #586e75;
+    border-color: #657b83; }
+  html a, html a:active, html a:visited, .light a, .light a:active, .light a:visited {
+    color: #586e75; }
+  html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
+    color: #b58900; }
+  html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: #b58900; }
+
+.dark {
+  background-color: #002b36;
+  color: #839496; }
+  .dark * {
+    color: #839496; }
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #93a1a1;
+    border-color: #839496; }
+  .dark a, .dark a:active, .dark a:visited {
+    color: #93a1a1; }
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
+/* Vertical Rhythm */
+/*
+@import "compass/typography/vertical_rhythm"
+
+$base-font-size   16px
+$base-line-height 24px
+
+body {
+    @include establish-baseline;
+}
+*/
+header {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 2em; }
+
+p {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: lighter;
+  margin: 0 0 1.5em; }
+
+/*Pygment Syntax Highlighting */
+.highlight .err {
+  border: 1px solid #dc322f; }
+
+/* Error */
+.highlight .hll {
+  background-color: #fdf6e3; }
+
+.highlight {
+  background: #eee8d5; }
+
+.highlight .c {
+  color: #93a1a1;
+  font-style: italic; }
+
+/* Comment */
+.highlight .k {
+  color: #268bd2;
+  font-weight: bold; }
+
+/* Keyword */
+.highlight .o {
+  color: #859900; }
+
+/* Operator */
+.highlight .cm {
+  color: #93a1a1;
+  font-style: italic; }
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #93a1a1; }
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #93a1a1;
+  font-style: italic; }
+
+/* Comment.Single */
+.highlight .cs {
+  color: #93a1a1;
+  font-weight: bold; }
+
+/* Comment.Special */
+.highlight .gd {
+  color: #dc322f; }
+
+/* Generic.Deleted */
+.highlight .ge {
+  font-style: italic; }
+
+/* Generic.Emph */
+.highlight .gr {
+  color: #dc322f; }
+
+/* Generic.Error */
+.highlight .gh {
+  color: #073642;
+  font-weight: bold; }
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #859900; }
+
+/* Generic.Inserted */
+.highlight .go {
+  color: #073642; }
+
+/* Generic.Output */
+.highlight .gp {
+  color: #268bd2;
+  font-weight: bold; }
+
+/* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold; }
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #586e75;
+  font-weight: bold; }
+
+/* Generic.Subheading */
+.highlight .gt {
+  color: #2aa198; }
+
+/* Generic.Traceback */
+.highlight .kc {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #d33682; }
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Keyword.Type */
+.highlight .m {
+  color: #268bd2; }
+
+/* Literal.Number */
+.highlight .s {
+  color: #6c71c4; }
+
+/* Literal.String */
+.highlight .na {
+  color: #6c71c4; }
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #d33682; }
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #586e75; }
+
+/* Name.Class */
+.highlight .no {
+  color: #586e75; }
+
+/* Name.Constant */
+.highlight .nd {
+  color: #d33682; }
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #586e75;
+  font-weight: bold; }
+
+/* Name.Entity */
+.highlight .ne {
+  color: #586e75;
+  font-weight: bold; }
+
+/* Name.Exception */
+.highlight .nf {
+  color: #859900; }
+
+/* Name.Function */
+.highlight .nl {
+  color: #859900; }
+
+/* Name.Label */
+.highlight .nn {
+  color: #859900;
+  font-weight: bold; }
+
+/* Name.Namespace */
+.highlight .nt {
+  color: #859900;
+  font-weight: bold; }
+
+/* Name.Tag */
+.highlight .nv {
+  color: #586e75; }
+
+/* Name.Variable */
+.highlight .ow {
+  color: #d33682;
+  font-weight: bold; }
+
+/* Operator.Word */
+.highlight .w {
+  color: #eee8d5; }
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #268bd2; }
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #268bd2; }
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #268bd2; }
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #268bd2; }
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #cb4b16; }
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #cb4b16; }
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #cb4b16;
+  font-style: italic; }
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #cb4b16; }
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #cb4b16;
+  font-weight: bold; }
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #cb4b16; }
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #cb4b16;
+  font-weight: bold; }
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #cb4b16; }
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #cb4b16; }
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #cb4b16; }
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #cb4b16; }
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #d33682; }
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #b58900; }
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #b58900; }
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #b58900; }
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #268bd2; }
+
+/* Literal.Number.Integer.Long */
+/* ~~~~~~~~~~~~~~~~~~ */
