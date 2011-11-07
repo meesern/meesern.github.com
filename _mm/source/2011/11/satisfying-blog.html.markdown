@@ -102,4 +102,5 @@ Next comes the layout.  Elastic vertical grid layout is the gold standard of web
 Type
 ------
 
+Middleman also supports [compass](http://compass-style.org/)- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way.  On lovely aspect of compass is support for vertical rhythm.
 
