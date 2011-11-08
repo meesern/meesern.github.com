@@ -2,4 +2,5 @@
 *.swp
 _mm/.sass-cache
 *~
+.sass-cache
 
