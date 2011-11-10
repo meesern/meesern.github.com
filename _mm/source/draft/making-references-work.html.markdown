@@ -1,7 +1,7 @@
 --- 
 title: Making References Work
 date: 08/11/2011
-tags: [Writing]
+tags: writing
 ---
 
 Making References Work
