@@ -32,7 +32,7 @@ The entities at play in this demonstration are:
 |                | food is prepared.        |
 | Waiter         | One of front of house    |
 |                | staff.                   |
-| Chief          | One of kitchen staff.    |
+| Chef           | One of kitchen staff.    |
 | The Service    | The area where prepared  |
 |                | food is taken front of   |
 |                | house.                   |
@@ -78,10 +78,16 @@ The entities at play in this demonstration are:
 |                | glyph.                   | of parts of a number string. E.g.
 |                |                          | "1:2:4" is the number string from a
 |                |                          | glyph with three regions.
-| Blob           | A countable point in a   | The number of blobs is counted to 
-|                | glyph region.            | produce the number in each number 
+| Blob           | A countable black mark   | The number of blobs is counted to 
+|                | in a glyph region.       | produce the number in each number 
 |                |                          | string. "1:2:4" has at most 4 blobs
 |                |                          | in a region.
+
+
+Dtouch
+......
+
+A note on dtouch markers: 1:2:4 is the number string for a marker or glyph with three regions.  The glyph itself is anything topologically like a three sided domino with 1, 2 and 4 spots respectivly.
 
 
 Proposed Customer Experience
