@@ -1,5 +1,6 @@
 
-/*@import "compass";
+/*
+@import "compass";
 #main {
   @include float-left;
   border: 1px solid black;
@@ -16,7 +17,8 @@
 
 #container {
   @include container;
-  @include susy-grid-background;
+/*  @include susy-grid-background;
+*/
 }
 
 header {
@@ -100,30 +102,72 @@ html * {
 /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 
 /* Vertical Rhythm */
-/*
-@import "compass/typography/vertical_rhythm"
 
-$base-font-size   16px
-$base-line-height 24px
+@import "vertical_rhythm";
+
+$base-font-size:   16px;
+$base-line-height: 26px;
 
 body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     @include establish-baseline;
+    /*@include debug-vertical-alignment;*/
 }
-*/
 
 header {
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    /*font-size: 2em;*/
+    @include adjust-font-size-to(60px,5);
+}
+
+h1 {
+    @include adjust-font-size-to(24px,2);
+}
+
+h2 {
+    @include adjust-font-size-to(24px,1.5);
+}
+
+@import "text-shadow";
+h1,h2,h3,h4,h5,h6,header {
+  @include text-shadow(rgba(255, 255, 255, 0.8) -1px -1px 0px);
+}
+
+aside li, aside h5 {
+  margin-top: 13px;
+  margin-bottom: 27px;
+}
+
+aside {
+  padding-top: 7px;
+}
+
+.entry-title {
+  margin-bottom: 26px;
 }
 
 p {
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     line-height: 1.4em;
     font-weight: lighter;
-    margin: 0 0 1.5em;
+    margin-top: 13px;
+    margin-bottom: 26px;
 }
 
+.highlight
+{
+  margin-bottom: 26px;
+}
+
+pre {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: lighter;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
+    @include margin-trailer;  /* Attempt to maintain vertical rhythm */
+}
+
+/*~~~~~~~~~~~~~ Syntax Highlight ~~~~~~~~~~~~~*/
 
 /*Pygment Syntax Highlighting */
 .highlight .err{ border: 1px solid $red; } /* Error */
@@ -189,5 +233,19 @@ p {
 .highlight .vi { color: $yellow;} /* Name.Variable.Instance */
 .highlight .il { color: $blue;  } /* Literal.Number.Integer.Long */
 
-/* ~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~Division~~~~~~~~~ */
+
+@import "box-shadow";
+@import "border-radius";
+
+body h2, #main {
+  border-bottom: 1px solid $yellow; 
+  @include single-box-shadow(white, 0, 0, 1px);
+}
+
+pre {
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px inset);
+  padding: 8px;
+  @include border-radius(2px);
+}
 

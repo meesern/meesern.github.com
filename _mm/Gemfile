@@ -3,4 +3,5 @@ gem "middleman"
 gem "middleman-blog"
 gem "rack-codehighlighter"
 gem "compass-susy-plugin"
+gem "rb-fsevent"
 

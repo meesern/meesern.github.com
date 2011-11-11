@@ -4,6 +4,8 @@ set :blog_permalink, ":year/:month/:title.html"
 # set :blog_summary_length, 500
 set :markdown, :layout_engine => :erb
 
+set :blog_taglink, "categories/:tag.html"
+
 page "/feed.xml", :layout => false
 #page "/2*", :layout => "layout-article"
 
