@@ -21,67 +21,67 @@ This section lays out a language for the discussion.
 
 The entities at play in this demonstration are:
 
-Entities       |  Meaning                 | Comment
---------       |  -------                 | -------
-The Restaurant | Physical location and    | A single location.
-               | organisation.            |
-The System     | The computer system used |
-               | to provide the customer  |
-               | demonstation interaction.|
-Kitchen        | The non-public area where|
-               | food is prepared.        |
-Waiter         | One of front of house    |
-               | staff.                   |
-Chief          | One of kitchen staff.    |
-The Service    | The area where prepared  |
-               | food is taken front of   |
-               | house.                   |
-The Customers  | The set of people who    | 
-               | eat at the restaurant.   | 
-A Customer     | An individual person.    | 
-A Party        | A group of Customers     |
-               | seated together and      |
-               | eating together.         |
-A Bill         | A payment for a specific |
-               | party.                   | Not unique to table.
-The Tables     | The set of tables        |
-               | within the restaurant.   |
-A Table        | A physical table.        |
-The Dishes     | The set of crockery      |
-               | Owned by the retaurant.  |
-Dish Type      | The class of dish        | E.g: Side plate, Square serving 
-               | identified by size and   | plate.
-               | shape.                   |
-A Dish         | Any single physical      | Dish has some ambiguity with 
-               | peice of tableware.      | Recipie.  Avoid this use.
-A Plate        | none                     | Used within Busaba as a metonymy 
-               |                          | for food type.  Best to avoid this 
-               |                          | term because of ambiguity between 
-               |                          | dish and food.
-A Food         | Food cooked to a         |
-               | particular recipe.       |
-Recipe         | A Food _or_ the directions|
-               | for preparing a food.    | The two uses of this term can be 
-               |                          | ambiguous but probably with little 
-               |                          | risk of confusion.
-A camera       | The input to the vision  | Cameras are in fixed locations
-               | recognition system.      | 
-Number String  | The Dtouch output. e.g.  |
-               | "1:4:3:2"                |
-Dtouch code    | As a number string.      |
-Glyph          | A single dtouch fiducial | Differently shaped glyphs which
-               | encoding a specific      | encode to the same number string
-               | number string.           | are considered to be the same glyph.
-Marker         | As a glyph.              | Importantly a marker may *not* be a
-               |                          | unique identifier.
-Region         | A white space within a   | The number of regions is the number 
-               | glyph.                   | of parts of a number string. e.g.
-               |                          | "1:2:4" is the number string from a
-               |                          | glyph with three regions.
-Blob           | A countable point in a   | The number of blobs is counted to 
-               | glyph region.            | produce the number in each number 
-               |                          | string. "1:2:4" has at most 4 blobs
-               |                          | in a region.
+| Entities       |  Meaning                 | Comment
+| --------       |  -------                 | -------
+| The Restaurant | Physical location and    | A single location.
+|                | organisation.            |
+| The System     | The computer system used |
+|                | to provide the customer  |
+|                | demonstration interaction.|
+| Kitchen        | The non-public area where|
+|                | food is prepared.        |
+| Waiter         | One of front of house    |
+|                | staff.                   |
+| Chief          | One of kitchen staff.    |
+| The Service    | The area where prepared  |
+|                | food is taken front of   |
+|                | house.                   |
+| The Customers  | The set of people who    | 
+|                | eat at the restaurant.   | 
+| A Customer     | An individual person.    | 
+| A Party        | A group of Customers     |
+|                | seated together and      |
+|                | eating together.         |
+| A Bill         | A payment for a specific |
+|                | party.                   | Not unique to table.
+| The Tables     | The set of tables        |
+|                | within the restaurant.   |
+| A Table        | A physical table.        |
+| The Dishes     | The set of crockery      |
+|                | Owned by the restaurant. |
+| Dish Type      | The class of dish        | E.g.: Side plate, Square serving 
+|                | identified by size and   | plate.
+|                | shape.                   |
+| A Dish         | Any single physical      | Dish has some ambiguity with 
+|                | piece of tableware.      | Recipe.  Avoid this use.
+| A Plate        | none                     | Used within Busaba as a metonymy 
+|                |                          | for food type.  Best to avoid this 
+|                |                          | term because of ambiguity between 
+|                |                          | dish and food.
+| A Food         | Food cooked to a         |
+|                | particular recipe.       |
+| Recipe         | A Food _or_ the directions|
+|                | for preparing a food.    | The two uses of this term can be 
+|                |                          | ambiguous but probably with little 
+|                |                          | risk of confusion.
+| A camera       | The input to the vision  | Cameras are in fixed locations
+|                | recognition system.      | 
+| Number String  | The Dtouch output. e.g.  |
+|                | "1:4:3:2"                |
+| Dtouch code    | As a number string.      |
+| Glyph          | A single dtouch fiducial | Differently shaped glyphs which
+|                | encoding a specific      | encode to the same number string
+|                | number string.           | are considered to be the same glyph.
+| Marker         | As a glyph.              | Importantly a marker may *not* be a
+|                |                          | unique identifier.
+| Region         | A white space within a   | The number of regions is the number 
+|                | glyph.                   | of parts of a number string. E.g.
+|                |                          | "1:2:4" is the number string from a
+|                |                          | glyph with three regions.
+| Blob           | A countable point in a   | The number of blobs is counted to 
+|                | glyph region.            | produce the number in each number 
+|                |                          | string. "1:2:4" has at most 4 blobs
+|                |                          | in a region.
 
 
 Proposed Customer Experience
@@ -244,7 +244,7 @@ issues
 Hybrid Solution
 ...............
 
-One hybrid solution could be to fully constrain marker to dish type and partially constrain food to dish type such that each dish type can be used for a small number of foods.  Here food defines dish type but dish type does not define food.  This has the advantage of fitting with Busaba existing practice.  The problem remains unsolved of manging the restricted mapping of food to marker.
+One hybrid solution could be to fully constrain marker to dish type and partially constrain food to dish type such that each dish type can be used for a small number of foods.  Here food defines dish type but dish type does not define food.  This has the advantage of fitting with Busaba existing practice.  The problem remains unsolved of managing the restricted mapping of food to marker.
 
 
 
@@ -278,7 +278,7 @@ Vision System Issues
 Dtouch Codespace
 ................
 
-The number of codes that can be represented by dtouch may be quite limitied.  The problem can be represented as a multiset with cardinality k taken from a set of size n where k is the number of dtouch regions and (n-1) is the maximum number of blobs in each region.
+The number of codes that can be represented by dtouch may be quite limited.  The problem can be represented as a multiset with cardinality k taken from a set of size n where k is the number of dtouch regions and (n-1) is the maximum number of blobs in each region.
 
 The code space is represented by:
 
@@ -358,29 +358,43 @@ With a checksum for resilience this can be achieved by designing codes with four
 Resolution
 ..........
 
-The fixed high definition camera can resolve 1280 x 740 pixels.  We estimate that for the initial demonstration the camera will be mounted in the lampshade above the table at a hight of one meter.  
+The fixed high definition camera can resolve 1280 x 740 pixels.  We estimate that for the initial demonstration the camera will be mounted in the lampshade above the table at a height of one meter.  
 
 The camera view area is described by a rectangular pyramid with proportions hight:1, width 0.8 and depth 0.46 (with HD aspect ratio).
 
 
 * At 1 meter mounting camera coverage is *80cm x 46cm*
-* At 1280x740 acuity is *1280/800 pixels/mm* 1.6 pixels/mm
-* At 640x480 acuity is *800/480 mm/pixel* or 1.6 mm/pixel
+* At 1280x740 acuity is 1280/800 pixels/mm 1.6 pixels/mm
+* At *640x480* acuity is 800/480 mm/pixel or 1.6 mm/pixel
 
 While high resolution allows detection of fine lines it also allows small discrepancies to be detected as nested regions which invalidate the codes.  Because of this it is unlikely that we can work with an acuity finer than 1.6mm/pixel.
 
-This creates a lower limit on the thickness and separation of each line that comprises the glyph and can give us a set of constraints on the designs as follows.
+This creates a lower limit on the thickness and separation of each line that comprises the glyph. 
+
+
+Dtouch Glyphs Design Constraints
+--------------------------------
+
+Taken together this information suggests a set of constraints on the ceramic designs as follows.
 
 1. Each marker has five regions.
 2. Each region must encode up to six blobs.
-3. Each line must be at least 1.6mm thick.
-4. Each line must be separated from every other by at least 1.6mm.
+3. Each line/point must be at least 1.6mm thick.
+4. Each line/point must be separated from every other by at least 1.6mm.
+5. Specular reflection should be minimised as far as possible.
 
 
 
-Proposed Workflow
+Possible Workflow
 ==================
 
+One complete and practicable solution to the workflow is presented below.
 
+![](/img/tt-demo-architecture.png)
 
+1. Joe sits at table and places loyalty card or phone displaying QR code to the centre of table where a camera picks it up and registers it as indicating Joe’s presence at the table.  Lights at the table pulse briefly to indicate recognition.  Joe orders his meal from the waiter and the order goes to the kitchen where a chef prepares the food.  
+2. Chef randomly selects a serving dish from a range of 80 different designs each mapping to an individual dtouch code.   Each dish carries an identifiable design when holding food.  When selecting the dish Chef asks the information system “Can I use this dish on this table”:  Chef presents the dish along with a card showing table number to a camera at the service area.  The cards showing  table numbers also carry dtouch markers allocated to each table making the card machine readable.  In response to the dish and table marker being recognised the system feeds back to the chef a ‘yes/no’ response to indicate if that design has been used at that table in the past two hours.  If necessary chef selects a different dish to ensure all dishes on a table are unique over a two hour time span.  
+3. Chef serves food to selected dish and waiter presents dish to the service area camera along with a card representing the food which is served on the dish.  The information system feeds back once the food is registered to the dish.   The dish is served to the table.  
+4. Joe, wishing to learn more about the dish places it in the centre of the table.  He receives an mmx message on his phone with a photo of the dish annotated with name and a link to further information. 
+5. Later in the day Joe wishes to recap the recipes.  He goes to a website and logs in to find photos and details of all of the food served to his table up to one hour following the point at which he registered at the table.
 
