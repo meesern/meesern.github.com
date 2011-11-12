@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]--><!-- Consider adding a manifest.appcache: h5bp.com/d/Offline --><!--[if gt IE 8]><!--><html class="no-js" lang="en">
+<!--<![endif]--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 --><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lightmind</title>
+<meta name="description" content="A blog about metaphor, ruby, software development, symbolic modelling and flexibility.">
+<meta name="author" content="Rupert Meese">
+<!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/css/mine.css">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
+       Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
+       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <header>
+      Output: On
+    </header><div id="main" role="main">
+      
+        
+        <div class="post">
+  <article class="hentry"><h1 class="entry-title">
+      Making References Work 
+      <time class="updated" pubdate>Aug 11 2011</time>
+</h1>
+    
+    <div class="entry-content">
+      <h1 id="making_references_work">Making References Work</h1>
+
+<p>So I have a vision for my blog of using a single writing format to create blog posts and academic papers. I use <a href="http://maruku.rubyforge.org/index.html">Maruku</a> in my blog to convert the elegantly formatted text files which I write into elegantly formatted HTML files which go on the web (see <a href="http://blog.lightmind.co.uk/2011/11/satisfying-blog.html">The World’s Most Satisfying Blog</a>. Pleasantly Maruku supports export to Latex making the possibility of the transition from blog post to academic paper seem plausible. The single biggest issue to solve is making references elegant.</p>
+
+<h2 id="the_ideal">The ideal</h2>
+
+<p>What I would like is to gather references for the books and articles that I read in a simple and accessible system. Preferably with the absolute minimum of tedious and error prone typing. When I come to reference a source I would like to be able to search through my catalog (preferably full text) to find the source that I have in mind and identify it by a simple knowable key - perhaps a composite of first author, year and number (e.g. <code>thibodeau201101</code> Then to include it in my article I would like to use a simple markup, perhaps like <code>[1]{thibodeau201101}</code> and have that automatically create a footnote to the citation in the case of formatting to a web page, or a bibliographic entry in the case of formatting a paper.</p>
+
+<h2 id="collecting_references">Collecting References</h2>
+
+<p>For academic articles this problem of collecting the reference is nicely solved by <a href="http://www.citeulike.org/">Citeulike</a> which, with the addition of a tool-bar bookmark can gather the details of any academic article posted on the web (which is most of them). To reference a book takes a couple of extra steps:</p>
+
+<ul>
+<li>Go to <a href="http://books.google.com/">Google Books</a>
+</li>
+
+<li>Search for the book you want to reference.</li>
+
+<li>At the bottom of the page click the <code>Export Citation: BiBTeX</code> button. Unfortunately it will not just show you the BiBTeX citation which you could paste into Citeulike, but rather downloads a file with the extension <code>.bibtex</code>.</li>
+
+<li>Go to <a href="http://www.citeulike.org/">Citeulike</a>.</li>
+
+<li>Assuming you are logged in you can choose the <code>MyCiteULike -&gt; import</code> option.</li>
+
+<li>Select the file just downloaded and fill in any tags that you want to use.</li>
+
+<li>Click <code>Import BiBTeX File</code>.</li>
+</ul>
+<h2 id="citing">Citing</h2>
+
+<p>BiBTeX uses a unique key for each entry based on the surname of the first author, the year of publication and the first word of the title. Since this is quite constructable while typing it is ideal for using as the markup reference. So in order to have a well formatted citation to “Metaphors we think by” by Paul Thibodeau I just want to include something like <code>[^{thibodeau2011metaphors}]</code> and have my blog source the citation from citeulike and format it nicely for web or paper.</p>
+    </div>
+  </article><div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+  </div>
+  <script type="text/javascript">
+      var disqus_shortname = 'lightmind'; 
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+
+      
+    </div>
+
+    <aside><h2>
+        <a href="/archives">Articles</a>
+      </h2>
+      <ol>
+<li>
+<a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
+</li>
+          
+      </ol>
+<h2>
+        <a href="/tags">Tags</a>
+      </h2>
+      <ul>
+<li>
+            <h5>software</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+<li>
+            <h5>other</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+</div> <!--! end of #container -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
+    window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script><!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

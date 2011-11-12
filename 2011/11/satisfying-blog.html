@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-<html><body>
-<p>﻿
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!-->  <!--<![endif]-->
-
-
-</p>
-  ﻿  <meta charset="utf-8">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]--><!-- Consider adding a manifest.appcache: h5bp.com/d/Offline --><!--[if gt IE 8]><!--><html class="no-js" lang="en">
+<!--<![endif]--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 <!-- Use the .htaccess and remove these lines to avoid edge case issues.
        More info: h5bp.com/b/378 --><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Lightmind</title>
 <meta name="description" content="A blog about metaphor, ruby, software development, symbolic modelling and flexibility.">
 <meta name="author" content="Rupert Meese">
 <!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/mine.css">
-<link rel="stylesheet" href="/css/pygments.css">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
-       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script><div id="container">
+       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+  <div id="container">
     <header>
       Output: On
     </header><div id="main" role="main">
@@ -31,14 +24,14 @@
         
         <div class="post">
   <article class="hentry"><h1 class="entry-title">
-      The Worlds Most Satisfying Blogging Platform 
+      The World's Most Satisfying Blogging Platform 
       <time class="updated" pubdate>May 11 2011</time>
 </h1>
     
     <div class="entry-content">
       <h2 id="i_only_wanted_a_simple_blog">I Only Wanted a Simple Blog</h2>
 
-<p>I suppose that it is quite typical. I set out to start a simple blog to write about the many many interesting things that I get involved with. Simple - go to <a href="http://wordpress.com">wordpress.com</a> and voilà! A Blog! Great, but I was going to be putting quite a number of code excerpts into the posts and wanted to be sure that syntax highlighting in multiple languages would work. It’s easy with a wordpress plugin but less so on wordpress.com as it does not support custom css/html in the template. According to <a href="http://heisencoder.net/2009/01/adding-syntax-highlighting-to-blogger.html">this great guide</a> to syntax highlighting in blogger <a href="http://www.blogger.com">Blogger</a> does support editing the template HTML and so I created a blog there as well to compare the two.</p>
+<p>I suppose that it is quite typical. I set out to start a simple blog to write about the many interesting things that I get involved with. Simple - go to <a href="http://wordpress.com">wordpress.com</a> and voilà! A Blog! Great, but I was going to be putting quite a number of code excerpts into the posts and wanted to be sure that syntax highlighting in multiple languages would work. It’s easy with a wordpress plugin but less so on wordpress.com as it does not support custom css/html in the template. According to <a href="http://heisencoder.net/2009/01/adding-syntax-highlighting-to-blogger.html">this great guide</a> to syntax highlighting in blogger <a href="http://www.blogger.com">Blogger</a> does support editing the template HTML and so I created a blog there as well to compare the two.</p>
 
 <p>Both of these blogs used <a href="http://code.google.com/p/syntaxhighlighter/">SyntaxHighlighter</a> - a javascript which highlights the code on the viewers browser. It’s a neat idea that works when you can’t do anything smart on the server (such as with wordpress.com or Blogger).</p>
 
@@ -48,7 +41,7 @@
 
 <h2 id="the_magic_of_static_sites">The Magic of Static Sites</h2>
 
-<p>I was struck by the simplicity and elegance of static site creation. There’s a lightness to pre-parsing pages and serving only HTML/Javascript. Everybody who looks at a blog page sees essentially the same thing so why construct the page at each request to the server? It is good to be free of an ugly crunchy old database. Having looked at a number of static blogs however there was one conspicuous absence: comments. A blog without the ability for readers to comment is like whistling into the wind. It feels isolated from the community. Clearly commenting on a blog post can not easily be managed if the web server it simply dishing out HTML but there was a reasonable solution in the form of <a href="http://disqus.com/">Diqus</a> which manages comments by installing a javascript on the page. It’s a nice and well polished system and while it’s free for a certain limit of page views I can confidently say that I’m not going to join the entry level and pay Disqus $300 per month for the privilege. I’ve often had to live on less than that. It does mean that I might need to migrate comments to some other system in the future but I checked and Diqus does at least have an export to XML option and that’s enough reassurance to allow me to start. Besides, <a href="http://h5bp.com">HTML5 Boilerplate</a> use it.</p>
+<p>I was struck by the simplicity and elegance of static site creation. There’s a lightness to pre-parsing pages and holding only HTML and Javascript on the server. Everybody who looks at a blog page sees essentially the same thing so why construct the page at each request? It is good to be free of an ugly crunchy old database. Having looked at a number of static blogs however there was one conspicuous absence: comments. A blog without the ability for readers to comment is like whistling into the wind. It feels isolated from the community. Clearly commenting on a blog post can not easily be managed if the web server it simply dishing out HTML but there was a reasonable solution in the form of <a href="http://disqus.com/">Diqus</a> which manages comments by installing a javascript on the page. It’s a nice and well polished system and while it’s free for a certain limit of page views I can confidently say that I’m not going to join the entry level and pay Disqus $300 per month for the privilege. I’ve often had to live on less than that. It does mean that I might need to migrate comments to some other system in the future but I checked and Diqus does at least have an export to XML option and that’s enough reassurance to allow me to start. Besides, <a href="http://h5bp.com">HTML5 Boilerplate</a> use it.</p>
 
 <p>Disqus uses comment spam protection from the well known <a href="http://akismet.com/">Akismet</a>. Again they are free for personal use but they have quite a nice voluntary contribution system when you sign up. If you want to use Akismet without paying you have to move a slider to $0 and endure the smiley face looking sad. It’s a shame in a way. I’d like to see them celebrating giving their good gift of spam protection to personal blogs while making a healthy income from additional features and higher usage. The slider says “how much is Akismet worth to you?” making the almost universal mismapping of money to value. There’s a lot still to be written about a more appropriate mapping of money to gratitude.</p>
 
@@ -124,9 +117,9 @@ compass create . -r susy -u susy
 </pre></div>
 
 
-<p>And here is what I like: I didn’t burden your browser by making it download parsers for a bunch of obscure languages. I didn’t even load the server when you requested the page you just got a bunch of safe clean quick HTML. Parsing happened just once when I built the site. And all I needed to do to include the excerpt was type it indented and name the language.</p>
+<p>And here is what I like: I didn’t burden your browser by making it download parsers for a bunch of obscure languages. I didn’t even load the server when you requested the page you just got a bunch of safe clean quick HTML. Not that your browser would mind. It’s hardly a burden but I like that parsing happened just once when I built the site. And I like that all I needed to do to include the excerpt was type it indented and name the language.</p>
 
-<p>So far so good - I have the highlighting markup but where are the colours? There seems to be remarkably little discussion in any of the documentation but eventually I found here <a href="https://github.com/wbzyl/rack-codehighlighter">https://github.com/wbzyl/rack-codehighlighter</a> that I need to download a stylesheet from here <a href="https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets">https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets</a>. Because I was going to change the scheme I included the file in my own <a href="http://sass-lang.com/">sass</a>.</p>
+<p>So far so good - I have the highlighting markup but where are the colours? There seems to be remarkably little discussion in any of the documentation but eventually I found here <a href="https://github.com/wbzyl/rack-codehighlighter">https://github.com/wbzyl/rack-codehighlighter</a> that I need to download a stylesheet from here <a href="https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets">https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets</a>. Because I was going to change the scheme I included the file in my own <a href="http://sass-lang.com/">sass</a>. If you are not using sass it is well worth looking into. In a nutshell it adds variables and support functions to css. This might sound like a nicety but it goes a long way in helping you remove presentational classes from your HTML and keeping the semantic/presentational separation in good health.</p>
 
 <h2 id="layout">Layout</h2>
 
@@ -134,7 +127,17 @@ compass create . -r susy -u susy
 
 <h2 id="type">Type</h2>
 
-<p>Middleman also supports <a href="http://compass-style.org/">compass</a>- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way. On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions. It’s an important part of having the page look good. Sadly one less than lovely aspect of compass is its documentation. It is like a sales pitch and similarly lacking in any genuine well thought out detail. It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless. Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman. <code>@import "compass/typography/vertical_rhythm"</code> the documentation said, then completely failed to import <code>compass/typography/vertical_rhythm</code>. Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory. Sadly once I’d done that the documentation did not reveal much about how the functions were to be used but I figured it out eventually. By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down.</p>
+<p>Middleman also supports <a href="http://compass-style.org/">compass</a>- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way. On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions. It’s an important part of having the page look good. Sadly one less than lovely aspect of compass is its documentation. It is like a sales pitch and similarly lacking in any genuine well thought out detail. It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless. Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman. <code>@import "compass/typography/vertical_rhythm"</code> the documentation said, then completely failed to import <code>compass/typography/vertical_rhythm</code>. Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory. Sadly once I’d done that the documentation did not reveal much about how the functions were to be used. By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down. They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy. The names were not even unique! Bad Times.</p>
+
+<h2 id="bugs">Bugs</h2>
+
+<p>Next was the simple problem of adding tags to the blog. Nicely supported by Middleman there was seemingly little to do but add the tags to the YAML header at the top of the post and paste in a little code to list the tags in the side bar. Only problem was that once I did that every page load crashed middleman. Lots of documentation checking turned up nothing and convinced me that there was a bug, and searching in he code in the gem showed that somehow the gem was missing some context for the label <code>blog_taglink</code> which should have been <code>app.blog_taglink</code> in feature.rb. Only problem was that fixing in moved the code on to another problem - one that stayed even when I rewound the changes. :-( More bad times.</p>
+
+<p>I finally discovered that the crash was due to experimenting with a new middleman build in my source directory. I had innocently created a scratch directory called ‘zzz’ and done a <code>middleman init . --template=blog</code> wanting to check for additional tag content in the config.rb that I might have lost. Middleman was trying to parse the whole thing and somehow getting confused enough to spin of and crash attempting to format a date!</p>
+
+<h2 id="polish">Polish</h2>
+
+<p>Now I’m ready for some styling.</p>
     </div>
   </article><div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
@@ -154,16 +157,33 @@ compass create . -r susy -u susy
     </div>
 
     <aside><h2>
-        Recent Articles
-        <a href="/archives">Archive</a>
+        <a href="/archives">Articles</a>
       </h2>
       <ol>
 <li>
-<a href="/2011/11/satisfying-blog.html">The Worlds Most Satisfying Blogging Platform</a> <span>May 11</span>
+<a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
 </li>
-        
-      
-    </ol></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          
+      </ol>
+<h2>
+        <a href="/tags">Tags</a>
+      </h2>
+      <ul>
+<li>
+            <h5>software</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+<li>
+            <h5>other</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
     </footer>
 </div> <!--! end of #container -->
 
@@ -171,7 +191,7 @@ compass create . -r susy -u susy
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
@@ -180,4 +200,5 @@ compass create . -r susy -u susy
     <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
-</body></html>
+</body>
+</html>
