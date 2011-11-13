@@ -97,9 +97,9 @@ html, .light {
   html a, html a:active, html a:visited, .light a, .light a:active, .light a:visited {
     color: #586e75; }
   html a, html a:active, html a:visited, html code.url, .light a, .light a:active, .light a:visited, .light code.url {
-    color: #b58900; }
+    color: #6c71c4; }
   html h1, html h2, html h3, html h4, html h5, html h6, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
-    color: #b58900; }
+    color: #6c71c4; }
 
 .dark {
   background-color: #002b36;
@@ -124,6 +124,14 @@ header #cl {
 
 header #on {
   color: #d33682; }
+
+header h2 {
+  color: #b58900; }
+
+aside a, aside a:active, aside a:visited, aside code.url {
+  color: #b58900; }
+aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
+  color: #b58900; }
 
 /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 /* Vertical Rhythm */
@@ -527,5 +535,4 @@ aside {
   aside ul, aside li a, aside a:visited, aside a:active {
     color: #2aa198; }
   aside h2 {
-    color: #b58900;
     margin-left: 8px; }

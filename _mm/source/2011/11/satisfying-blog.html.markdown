@@ -117,6 +117,6 @@ I finally discovered that the crash was due to experimenting with a new middlema
 Polish
 ------
 
-Now I'm ready for some styling.
+Now I'm ready for some styling... A little CSS3 niceness and the blog is good to go!
 
 
