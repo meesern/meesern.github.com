@@ -23,7 +23,21 @@
 
 header {
   @include full;
-  @include prefix(3);
+  #hdr_img {
+      @include columns(3);
+      img {
+        margin-top: 20px;
+        margin-left: 30px;
+      }
+  }
+  h1 {
+      @include columns(5);
+      margin-top: 8px;
+  }
+  h2 {
+    @include columns(3);
+    margin-top: 40px;
+  }
 }
 
 #main {
@@ -98,6 +112,17 @@ html * {
     rendering-intent: auto;
 }
 
+header #op {
+  color: $cyan;
+}
+
+header #cl {
+  color: $base02;
+}
+
+header #on {
+  color: $magenta;
+}
 
 /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 
@@ -114,8 +139,11 @@ body {
     /*@include debug-vertical-alignment;*/
 }
 
-header {
-    /*font-size: 2em;*/
+a {
+  text-decoration: none;
+}
+
+header h1 {
     @include adjust-font-size-to(60px,5);
 }
 
@@ -138,7 +166,7 @@ aside li, aside h5 {
 }
 
 aside {
-  padding-top: 7px;
+  margin-top: 7px;
 }
 
 .entry-title {
@@ -238,7 +266,7 @@ pre {
 @import "box-shadow";
 @import "border-radius";
 
-body h2, #main {
+.entry-content h2, #main {
   border-bottom: 1px solid $yellow; 
   @include single-box-shadow(white, 0, 0, 1px);
 }
@@ -247,5 +275,60 @@ pre {
   @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px inset);
   padding: 8px;
   @include border-radius(2px);
+}
+
+.entry-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+}
+
+/* ~~~~~~~~~Header~~~~~~~~~ */
+
+header {
+  height: 180px;
+  background-color:  $base2;
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+  @include border-radius(4px);
+  background-image: url(/img/rue-stampt-m.png);
+  background-repeat: no-repeat;
+  background-position: 96% 90%;
+
+  h1 {
+    font-family: 'Terminal Dosis';
+    font-weight: 800;
+  }
+
+  h2 {
+    font-family: 'Terminal Dosis';
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+
+/* ~~~~~~~~~Aside~~~~~~~~~ */
+
+aside {
+  background-color:  transparentize($base02,0.4);
+  @include border-radius(4px);
+  @include box-shadow(rgba(0, 0, 0, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+
+  h1,h2,h3,h4,h5,h6,ul,ol{
+    @include text-shadow(transparentize($base03,0.4) 1px 1px 1px);
+    margin-bottom: 13px;
+  }
+  
+  ul, li a, a:visited, a:active {
+    color: $cyan;
+  }
+  
+  h2 {
+    color: $yellow;
+    margin-left: 8px;
+  }
+
+
 }
 

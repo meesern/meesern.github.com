@@ -1,7 +1,8 @@
 --- 
-title: "The World's Most Satisfying Blogging Platform"
-date: 05/11/2011
-tags: software, other
+title:  The World's Most Satisfying Blogging Platform
+date:   05/11/2011
+tags:   software, other
+draft:  true
 ---
 
 I Only Wanted a Simple Blog
@@ -103,7 +104,7 @@ Next comes the layout.  Elastic vertical grid layout is the gold standard of web
 Type
 ------
 
-Middleman also supports [compass](http://compass-style.org/)- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way.  On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions.  It's an important part of having the page look good.  Sadly one less than lovely aspect of compass is its documentation.  It is like a sales pitch and similarly lacking in any genuine well thought out detail.  It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless.  Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman.  `@import "compass/typography/vertical_rhythm"` the documentation said, then completely failed to import `compass/typography/vertical_rhythm`.  Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory.  Sadly once I'd done that the documentation did not reveal much about how the functions were to be used.   By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down.  They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy.  The names were not even unique!  Bad Times.
+Middleman also supports [compass](http://compass-style.org/)- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way.  On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions.  It's an important part of having the page look good.  Sadly one less than lovely aspect of compass is its documentation.  It is like a sales pitch and similarly lacking in any genuine well thought out detail.  It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless.  Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman.  `@import "compass/typography/vertical_rhythm"` the documentation said, then completely failed to import `compass/typography/vertical_rhythm`.  Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory.  Sadly once I'd done that the documentation did not reveal much about how the functions were to be used.   By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down.  They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy.  The names were not even unique!  Bad Times.  Eventually I discovered that I needed to `require` the additional compass plugins in `config.rb`.
 
 Bugs
 -----

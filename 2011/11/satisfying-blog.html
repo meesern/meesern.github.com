@@ -11,14 +11,25 @@
 <!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="/css/mine.css">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
   <div id="container">
-    <header>
-      Output: On
+    <header><div id="hdr_img">
+      <a href="/">
+        <img src="/img/output-on-switch-147.png"></a>
+    </div>
+    <h1>
+      <a href="/">
+        <span id="op">Output</span><span id="cl">: </span><span id="on">On</span>
+      </a>
+    </h1>
+    <h2>
+    Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
+    </h2>
     </header><div id="main" role="main">
       
         
@@ -127,7 +138,7 @@ compass create . -r susy -u susy
 
 <h2 id="type">Type</h2>
 
-<p>Middleman also supports <a href="http://compass-style.org/">compass</a>- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way. On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions. It’s an important part of having the page look good. Sadly one less than lovely aspect of compass is its documentation. It is like a sales pitch and similarly lacking in any genuine well thought out detail. It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless. Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman. <code>@import "compass/typography/vertical_rhythm"</code> the documentation said, then completely failed to import <code>compass/typography/vertical_rhythm</code>. Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory. Sadly once I’d done that the documentation did not reveal much about how the functions were to be used. By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down. They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy. The names were not even unique! Bad Times.</p>
+<p>Middleman also supports <a href="http://compass-style.org/">compass</a>- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way. On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions. It’s an important part of having the page look good. Sadly one less than lovely aspect of compass is its documentation. It is like a sales pitch and similarly lacking in any genuine well thought out detail. It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless. Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman. <code>@import "compass/typography/vertical_rhythm"</code> the documentation said, then completely failed to import <code>compass/typography/vertical_rhythm</code>. Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory. Sadly once I’d done that the documentation did not reveal much about how the functions were to be used. By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down. They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy. The names were not even unique! Bad Times. Eventually I discovered that I needed to <code>require</code> the additional compass plugins in <code>config.rb</code>.</p>
 
 <h2 id="bugs">Bugs</h2>
 
@@ -145,6 +156,7 @@ compass create . -r susy -u susy
   </div>
   <script type="text/javascript">
       var disqus_shortname = 'lightmind'; 
+      //var disqus_identifier = ;
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -183,14 +195,13 @@ compass create . -r susy -u susy
               
             </ul>
 </li>
-</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">comments supported by <span class="logo-disqus">Disqus</span></a>
     </footer>
 </div> <!--! end of #container -->
 
   <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
+  <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800" rel="stylesheet" type="text/css">
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
     window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

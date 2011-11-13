@@ -11,14 +11,25 @@
 <!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="/css/mine.css">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
   <div id="container">
-    <header>
-      Output: On
+    <header><div id="hdr_img">
+      <a href="/">
+        <img src="/img/output-on-switch-147.png"></a>
+    </div>
+    <h1>
+      <a href="/">
+        <span id="op">Output</span><span id="cl">: </span><span id="on">On</span>
+      </a>
+    </h1>
+    <h2>
+    Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
+    </h2>
     </header><div id="main" role="main">
       
         
@@ -31,7 +42,7 @@
     <div class="entry-content">
       <p>I have been tasked with building an openqwaq installation for Horizon Digital Economy Research to allow academics, researchers and collaborators to communicate in a virtual space.</p>
 
-<p>Openqwaq is a Google code project with a dense homepage here: <a href="http://code.google.com/p/openqwaq/">http://code.google.com/p/openqwaq/</a>. The installation instructions are on the project wiki and the Linux installation here <a href="http://code.google.com/p/openqwaq/wiki/detailedLinuxInstructions">http://code.google.com/p/openqwaq/wiki/detailedLinuxInstructions</a> shows an unsurprising number of dependencies and steps in the installation (unsurprising given the complexity of the immersive collaboration tools). After thirty seconds of looking over the installation page it seemed to me that finding a virtual machine instance with everything already set up would be the best approach. I found a couple of obscure references that suggested that Sugar Labs who make the Sugar children’s learning environment had created a VM, but after some trawling through their website I came to the conclusion that it was merely part of their test environment.</p>
+<p>Openqwaq is a Google code project with a dense homepage here: <a href="http://code.google.com/p/openqwaq/">http://code.google.com/p/openqwaq/</a>. The installation instructions are on the project wiki and the Linux installation here: <a href="http://code.google.com/p/openqwaq/wiki/detailedLinuxInstructions">DetailedLinuxInstructions</a> shows an unsurprising number of dependencies and steps in the installation (unsurprising given the complexity of the immersive collaboration tools). After thirty seconds of looking over the installation page it seemed to me that finding a virtual machine instance with everything already set up would be the best approach. I found a couple of obscure references that suggested that Sugar Labs who make the Sugar children’s learning environment had created a VM, but after some trawling through their website I came to the conclusion that it was merely part of their test environment.</p>
 
 <p>Searching the public VMware and VirtualBox appliances turned up nothing and so creating one seemed like the best option. As Horizon needed to run openqwaq in collaboration with external collaborators it would be necessary for the running server to be a proper internet citizen (meaning available outside the university firewall) and so it would need to be hosted by a cloud provider. As the configuration appeared somewhat complex I preferred to work on a VM initially and then transfer to the cloud. This made Amazon Elastic Compute Cloud (EC2) the clear choice as it supported creating an AMI by importing a VMware virtual machine. While VMware was the obvious starting point for the virtualisation host as it is supported by EC2 I have to say I find the VMware website impenetrable and off-putting. It has diagrams like this… <img src="/img/VMW-DGRM-Enterprise-Hybrid-Cloud-Overview-104-900x740.png" alt="Vmware"> Which it presents as though they were in some way helpful. If I were going to use VMware and as I only need to modify an existing virtual machine I’d start by downloading the free VMWare player from here: <a href="http://www.vmware.com/products/player/">http://www.vmware.com/products/player/</a>. But instead I will use virtualbox and export to a vmdk image that EC2 can import.</p>
 
@@ -211,6 +222,7 @@ sudo chkconfig postfix 3
   </div>
   <script type="text/javascript">
       var disqus_shortname = 'lightmind'; 
+      //var disqus_identifier = ;
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -249,14 +261,13 @@ sudo chkconfig postfix 3
               
             </ul>
 </li>
-</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">comments supported by <span class="logo-disqus">Disqus</span></a>
     </footer>
 </div> <!--! end of #container -->
 
   <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
+  <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800" rel="stylesheet" type="text/css">
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
     window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

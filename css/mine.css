@@ -26,8 +26,27 @@
 header {
   clear: both;
   margin-left: 1.37%;
-  margin-right: 1.37%;
-  padding-left: 24.658%; }
+  margin-right: 1.37%; }
+  header #hdr_img {
+    display: inline;
+    float: left;
+    width: 23.288%;
+    margin-right: 1.37%; }
+    header #hdr_img img {
+      margin-top: 20px;
+      margin-left: 30px; }
+  header h1 {
+    display: inline;
+    float: left;
+    width: 39.726%;
+    margin-right: 1.37%;
+    margin-top: 8px; }
+  header h2 {
+    display: inline;
+    float: left;
+    width: 23.288%;
+    margin-right: 1.37%;
+    margin-top: 40px; }
 
 #main {
   display: inline;
@@ -97,6 +116,15 @@ html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+header #op {
+  color: #2aa198; }
+
+header #cl {
+  color: #073642; }
+
+header #on {
+  color: #d33682; }
+
 /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 /* Vertical Rhythm */
 body {
@@ -108,8 +136,10 @@ body {
   body html > body {
     font-size: 16px; }
 
-header {
-  /*font-size: 2em;*/
+a {
+  text-decoration: none; }
+
+header h1 {
   font-size: 3.75em;
   line-height: 2.167em; }
 
@@ -129,7 +159,7 @@ aside li, aside h5 {
   margin-bottom: 27px; }
 
 aside {
-  padding-top: 7px; }
+  margin-top: 7px; }
 
 .entry-title {
   margin-bottom: 26px; }
@@ -423,7 +453,7 @@ pre {
 
 /* Literal.Number.Integer.Long */
 /* ~~~~~~~~~Division~~~~~~~~~ */
-body h2, #main {
+.entry-content h2, #main {
   border-bottom: 1px solid #b58900;
   -moz-box-shadow: 0 0 1px white;
   -webkit-box-shadow: 0 0 1px white;
@@ -442,3 +472,60 @@ pre {
   -ms-border-radius: 2px;
   -khtml-border-radius: 2px;
   border-radius: 2px; }
+
+.entry-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px; }
+
+/* ~~~~~~~~~Header~~~~~~~~~ */
+header {
+  height: 180px;
+  background-color: #eee8d5;
+  -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  background-image: url(/img/rue-stampt-m.png);
+  background-repeat: no-repeat;
+  background-position: 96% 90%; }
+  header h1 {
+    font-family: 'Terminal Dosis';
+    font-weight: 800; }
+  header h2 {
+    font-family: 'Terminal Dosis';
+    font-weight: 400;
+    font-size: 1em; }
+
+/* ~~~~~~~~~Aside~~~~~~~~~ */
+aside {
+  background-color: rgba(7, 54, 66, 0.6);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: black 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -webkit-box-shadow: black 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -o-box-shadow: black 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  box-shadow: black 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px; }
+  aside h1, aside h2, aside h3, aside h4, aside h5, aside h6, aside ul, aside ol {
+    text-shadow: rgba(0, 43, 54, 0.6) 1px 1px 1px;
+    margin-bottom: 13px; }
+  aside ul, aside li a, aside a:visited, aside a:active {
+    color: #2aa198; }
+  aside h2 {
+    color: #b58900;
+    margin-left: 8px; }

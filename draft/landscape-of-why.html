@@ -11,14 +11,25 @@
 <!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="/css/mine.css">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
        Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
        for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
   <div id="container">
-    <header>
-      Output: On
+    <header><div id="hdr_img">
+      <a href="/">
+        <img src="/img/output-on-switch-147.png"></a>
+    </div>
+    <h1>
+      <a href="/">
+        <span id="op">Output</span><span id="cl">: </span><span id="on">On</span>
+      </a>
+    </h1>
+    <h2>
+    Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
+    </h2>
     </header><div id="main" role="main">
       
         
@@ -39,6 +50,7 @@
   </div>
   <script type="text/javascript">
       var disqus_shortname = 'lightmind'; 
+      //var disqus_identifier = ;
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -77,14 +89,13 @@
               
             </ul>
 </li>
-</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">comments supported by <span class="logo-disqus">Disqus</span></a>
     </footer>
 </div> <!--! end of #container -->
 
   <!-- JavaScript at the bottom for fast page loading -->
-
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><!-- Change UA-XXXXX-X to be your site's ID --><script>
+  <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800" rel="stylesheet" type="text/css">
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
     window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
