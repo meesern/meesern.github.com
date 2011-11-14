@@ -1,12 +1,14 @@
 --- 
-title: "The Worlds Most Satisfying Blogging Platform"
-date: 05/11/2011
+title:  The World's Most Satisfying Blogging Platform
+date:   05/11/2011
+tags:   software, other
+draft:  true
 ---
 
 I Only Wanted a Simple Blog
 ---------------------------
 
-I suppose that it is quite typical.  I set out to start a simple blog to write about the many many interesting things that I get involved with.  Simple - go to [wordpress.com](http://wordpress.com) and voilà!  A Blog! Great, but I was going to be putting quite a number of code excerpts into the posts and wanted to be sure that syntax highlighting in multiple languages would work.  It's easy with a wordpress plugin but less so on wordpress.com as it does not support custom css/html in the template.  According to [this great guide](http://heisencoder.net/2009/01/adding-syntax-highlighting-to-blogger.html) to syntax highlighting in blogger [Blogger](http://www.blogger.com) does support editing the template HTML and so I created a blog there as well to compare the two. 
+I suppose that it is quite typical.  I set out to start a simple blog to write about the many interesting things that I get involved with.  Simple - go to [wordpress.com](http://wordpress.com) and voilà!  A Blog! Great, but I was going to be putting quite a number of code excerpts into the posts and wanted to be sure that syntax highlighting in multiple languages would work.  It's easy with a wordpress plugin but less so on wordpress.com as it does not support custom css/html in the template.  According to [this great guide](http://heisencoder.net/2009/01/adding-syntax-highlighting-to-blogger.html) to syntax highlighting in blogger [Blogger](http://www.blogger.com) does support editing the template HTML and so I created a blog there as well to compare the two. 
 
 Both of these blogs used [SyntaxHighlighter](http://code.google.com/p/syntaxhighlighter/) - a javascript which highlights the code on the viewers browser.  It's a neat idea that works when you can't do anything smart on the server (such as with wordpress.com or Blogger).
 
@@ -17,7 +19,7 @@ While looking for syntax highlighting for Tumblr I found [google-code-prettify](
 The Magic of Static Sites
 --------------------------
 
-I was struck by the simplicity and elegance of static site creation.  There's a lightness to pre-parsing pages and serving only HTML/Javascript.  Everybody who looks at a blog page sees essentially the same thing so why construct the page at each request to the server?  It is good to be free of an ugly crunchy old database.  Having looked at a number of static blogs however there was one conspicuous absence: comments.  A blog without the ability for readers to comment is like whistling into the wind.  It feels isolated from the community.  Clearly commenting on a blog post can not easily be managed if the web server it simply dishing out HTML but there was a reasonable solution in the form of [Diqus](http://disqus.com/) which manages comments by installing a javascript on the page.  It's a nice and well polished system and while it's free for a certain limit of page views I can confidently say that I'm not going to join the entry level and pay Disqus $300 per month for the privilege.  I've often had to live on less than that.  It does mean that I might need to migrate comments to some other system in the future but I checked and Diqus does at least have an export to XML option and that's enough reassurance to allow me to start.  Besides, [HTML5 Boilerplate](http://h5bp.com) use it.
+I was struck by the simplicity and elegance of static site creation.  There's a lightness to pre-parsing pages and holding only HTML and Javascript on the server.  Everybody who looks at a blog page sees essentially the same thing so why construct the page at each request?  It is good to be free of an ugly crunchy old database.  Having looked at a number of static blogs however there was one conspicuous absence: comments.  A blog without the ability for readers to comment is like whistling into the wind.  It feels isolated from the community.  Clearly commenting on a blog post can not easily be managed if the web server it simply dishing out HTML but there was a reasonable solution in the form of [Diqus](http://disqus.com/) which manages comments by installing a javascript on the page.  It's a nice and well polished system and while it's free for a certain limit of page views I can confidently say that I'm not going to join the entry level and pay Disqus $300 per month for the privilege.  I've often had to live on less than that.  It does mean that I might need to migrate comments to some other system in the future but I checked and Diqus does at least have an export to XML option and that's enough reassurance to allow me to start.  Besides, [HTML5 Boilerplate](http://h5bp.com) use it.
 
 Disqus uses comment spam protection from the well known [Akismet](http://akismet.com/).  Again they are free for personal use but they have quite a nice voluntary contribution system when you sign up.  If you want to use Akismet without paying you have to move a slider to $0 and endure the smiley face looking sad.  It's a shame in a way.  I'd like to see them celebrating giving their good gift of spam protection to personal blogs while making a healthy income from additional features and higher usage.  The slider says "how much is Akismet worth to you?" making the almost universal mismapping of money to value.  There's a lot still to be written about a more appropriate mapping of money to gratitude.
 
@@ -89,9 +91,9 @@ The first problem in this case is that Maruku's documentation for authors leaves
     > + .                   print '!'
     > .                     print '\n'
     
-And here is what I like: I didn't burden your browser by making it download parsers for a bunch of obscure languages.  I didn't even load the server when you requested the page you just got a bunch of safe clean quick HTML.  Parsing happened just once when I built the site.  And all I needed to do to include the excerpt was type it indented and name the language.
+And here is what I like: I didn't burden your browser by making it download parsers for a bunch of obscure languages.  I didn't even load the server when you requested the page you just got a bunch of safe clean quick HTML.  Not that your browser would mind.  It's hardly a burden but I like that parsing happened just once when I built the site.  And I like that all I needed to do to include the excerpt was type it indented and name the language.
 
-So far so good - I have the highlighting markup but where are the colours?  There seems to be remarkably little discussion in any of the documentation but eventually I found here <https://github.com/wbzyl/rack-codehighlighter> that I need to download a stylesheet from here <https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets>.  Because I was going to change the scheme I included the file in my own [sass](http://sass-lang.com/).
+So far so good - I have the highlighting markup but where are the colours?  There seems to be remarkably little discussion in any of the documentation but eventually I found here <https://github.com/wbzyl/rack-codehighlighter> that I need to download a stylesheet from here <https://github.com/wbzyl/rack-codehighlighter/tree/master/examples/public/stylesheets>.  Because I was going to change the scheme I included the file in my own [sass](http://sass-lang.com/).  If you are not using sass it is well worth looking into.  In a nutshell it adds variables and support functions to css.  This might sound like a nicety but it goes a long way in helping you remove presentational classes from your HTML and keeping the semantic/presentational separation in good health.
 
 Layout
 -------
@@ -102,5 +104,19 @@ Next comes the layout.  Elastic vertical grid layout is the gold standard of web
 Type
 ------
 
-Middleman also supports [compass](http://compass-style.org/)- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way.  On lovely aspect of compass is support for vertical rhythm.
+Middleman also supports [compass](http://compass-style.org/)- a bunch of css macros built on the power of Sass that tidy up various ugly css jobs such as defining gradients in a cross browser friendly way.  On lovely aspect of compass is support for vertical rhythm - helping to align font sizes, line-heights and margins so that the text on the page follows regular proportions.  It's an important part of having the page look good.  Sadly one less than lovely aspect of compass is its documentation.  It is like a sales pitch and similarly lacking in any genuine well thought out detail.  It is a lot like libraries that I am sure you have come across that forget to tell you what file to include, so you know that it would be great if you could use it but without that information it is useless.  Sadly Compass completely failed to respond in a useful way when I tried to use it in Middleman.  `@import "compass/typography/vertical_rhythm"` the documentation said, then completely failed to import `compass/typography/vertical_rhythm`.  Not surprising as there was no such file and I spent hours reading the documentation and trying to persuade compass to create one. In the end I cloned the compass repository and copied the frameworks manually into my css directory.  Sadly once I'd done that the documentation did not reveal much about how the functions were to be used.   By this time I was pretty much aware that it would have been easier to stick to Wordpress and satisfaction points were way down.  They sank further when I realized that middleman was not processing any subdirectory within the css directory and I had to flatten out the compass directory hierarchy.  The names were not even unique!  Bad Times.  Eventually I discovered that I needed to `require` the additional compass plugins in `config.rb`.
+
+Bugs
+-----
+
+Next was the simple problem of adding tags to the blog.  Nicely supported by Middleman there was seemingly little to do but add the tags to the YAML header at the top of the post and paste in a little code to list the tags in the side bar.  Only problem was that once I did that every page load crashed middleman.  Lots of documentation checking turned up nothing and convinced me that there was a bug, and searching in he code in the gem showed that somehow the gem was missing some context for the label `blog_taglink` which should have been `app.blog_taglink` in feature.rb.  Only problem was that fixing in moved the code on to another problem - one that stayed even when I rewound the changes.  :-(  More bad times.
+
+I finally discovered that the crash was due to experimenting with a new middleman build in my source directory.  I had innocently created a scratch directory called 'zzz' and done a `middleman init . --template=blog` wanting to check for additional tag content in the config.rb that I might have lost.  Middleman was trying to parse the whole thing and somehow getting confused enough to spin of and crash attempting to format a date!
+
+
+Polish
+------
+
+Now I'm ready for some styling... A little CSS3 niceness and the blog is good to go!
+
 

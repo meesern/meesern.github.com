@@ -1,0 +1,11 @@
+
+<h1> Draft posts </h1>
+
+
+<% Dir.foreach('build/draft') do |draft, i| %>
+  <% if draft =~ /.html/ %>
+    <article class="<%= (i == 0) ? 'first' : '' %>">
+      <h5><a href="/draft/<%= draft%>"><%= draft.split('.html')[0]%></a> </h1>
+    </article>
+  <% end %>
+<% end %>

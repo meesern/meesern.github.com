@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]--><!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]--><!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]--><!-- Consider adding a manifest.appcache: h5bp.com/d/Offline --><!--[if gt IE 8]><!--><html class="no-js" lang="en">
+<!--<![endif]--><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 --><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lightmind</title>
+<meta name="description" content="A blog about metaphor, ruby, software development, symbolic modelling and flexibility.">
+<meta name="author" content="Rupert Meese">
+<!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/css/mine.css">
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
+       Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
+       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ --><script src="/js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <header><div id="hdr_img">
+      <a href="/">
+        <img src="/img/output-on-switch-147.png"></a>
+    </div>
+    <h1>
+      <a href="/">
+        <span id="op">Output</span><span id="cl">: </span><span id="on">On</span>
+      </a>
+    </h1>
+    <h2>
+    Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
+    </h2>
+    </header><div id="main" role="main">
+      
+        
+        <div class="post">
+  <article class="hentry"><h1 class="entry-title">
+      Busaba Trackable Tableware Demo Workflow Discussion Document 
+      <time class="updated" pubdate>Aug 11 2011</time>
+</h1>
+    
+    <div class="entry-content">
+      <h1 id="busaba_trackable_tableware_demo_workflow_discussion_document">Busaba Trackable Tableware Demo Workflow Discussion Document</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>This document aims to explore the issues involved in creating the demonstration at Busaba Eathai of a dining experience in which the connection between diner and restaurant is enhanced by a system of visual tracking of crockery. This document explores the requirements for mapping entities and workflows in order to create an robust set of interactions.</p>
+
+<h2 id="entities">Entities</h2>
+
+<p>This section lays out a language for the discussion.</p>
+
+<p>The entities at play in this demonstration are:</p>
+<table>
+<thead><tr>
+<th>Entities</th>
+<th>Meaning</th>
+<th>Comment</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align: left;">The Restaurant</td>
+<td style="text-align: left;">Physical location and</td>
+<td style="text-align: left;">A single location.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">organisation.</td>
+<td style="text-align: left;">The System</td>
+</tr>
+<tr>
+<td style="text-align: left;">The computer system used</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">to provide the customer</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">demonstration interaction.</td>
+<td style="text-align: left;">Kitchen</td>
+</tr>
+<tr>
+<td style="text-align: left;">The non-public area where</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">food is prepared.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Waiter</td>
+<td style="text-align: left;">One of front of house</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">staff.</td>
+<td style="text-align: left;">Chef</td>
+<td style="text-align: left;">One of kitchen staff.</td>
+</tr>
+<tr>
+<td style="text-align: left;">The Service</td>
+<td style="text-align: left;">The area where prepared</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">food is taken front of</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">house.</td>
+</tr>
+<tr>
+<td style="text-align: left;">The Customers</td>
+<td style="text-align: left;">The set of people who</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">eat at the restaurant.</td>
+<td style="text-align: left;">A Customer</td>
+<td style="text-align: left;">An individual person.</td>
+</tr>
+<tr>
+<td style="text-align: left;">A Party</td>
+<td style="text-align: left;">A group of Customers</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">seated together and</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">eating together.</td>
+</tr>
+<tr>
+<td style="text-align: left;">A Bill</td>
+<td style="text-align: left;">A payment for a specific</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">party.</td>
+<td style="text-align: left;">Not unique to table.</td>
+<td style="text-align: left;">The Tables</td>
+</tr>
+<tr>
+<td style="text-align: left;">The set of tables</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">within the restaurant.</td>
+</tr>
+<tr>
+<td style="text-align: left;">A Table</td>
+<td style="text-align: left;">A physical table.</td>
+<td style="text-align: left;">The Dishes</td>
+</tr>
+<tr>
+<td style="text-align: left;">The set of crockery</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Owned by the restaurant.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dish Type</td>
+<td style="text-align: left;">The class of dish</td>
+<td style="text-align: left;">E.g.: Side plate, Square serving</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">identified by size and</td>
+<td style="text-align: left;">plate.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">shape.</td>
+<td style="text-align: left;">A Dish</td>
+</tr>
+<tr>
+<td style="text-align: left;">Any single physical</td>
+<td style="text-align: left;">Dish has some ambiguity with</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">piece of tableware.</td>
+<td style="text-align: left;">Recipe. Avoid this use.</td>
+<td style="text-align: left;">A Plate</td>
+</tr>
+<tr>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">Used within Busaba as a metonymy</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">for food type. Best to avoid this</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">term because of ambiguity between</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">dish and food.</td>
+<td style="text-align: left;">A Food</td>
+</tr>
+<tr>
+<td style="text-align: left;">Food cooked to a</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">particular recipe.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recipe</td>
+<td style="text-align: left;">A Food <em>or</em> the directions</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">for preparing a food.</td>
+<td style="text-align: left;">The two uses of this term can be</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">ambiguous but probably with little</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">risk of confusion.</td>
+<td style="text-align: left;">A camera</td>
+</tr>
+<tr>
+<td style="text-align: left;">The input to the vision</td>
+<td style="text-align: left;">Cameras are in fixed locations</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">recognition system.</td>
+<td style="text-align: left;">Number String</td>
+<td style="text-align: left;">The Dtouch output. e.g.</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">“1:4:3:2”</td>
+<td style="text-align: left;">Dtouch code</td>
+</tr>
+<tr>
+<td style="text-align: left;">As a number string.</td>
+<td style="text-align: left;">Glyph</td>
+<td style="text-align: left;">A single dtouch fiducial</td>
+</tr>
+<tr>
+<td style="text-align: left;">Differently shaped glyphs which</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">encoding a specific</td>
+</tr>
+<tr>
+<td style="text-align: left;">encode to the same number string</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">number string.</td>
+</tr>
+<tr>
+<td style="text-align: left;">are considered to be the same glyph.</td>
+<td style="text-align: left;">Marker</td>
+<td style="text-align: left;">As a glyph.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Importantly a marker may <em>not</em> be a</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">unique identifier.</td>
+<td style="text-align: left;">Region</td>
+<td style="text-align: left;">A white space within a</td>
+</tr>
+<tr>
+<td style="text-align: left;">The number of regions is the number</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">glyph.</td>
+</tr>
+<tr>
+<td style="text-align: left;">of parts of a number string. E.g.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">“1:2:4” is the number string from a</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">glyph with three regions.</td>
+<td style="text-align: left;">Blob</td>
+<td style="text-align: left;">A countable black mark</td>
+</tr>
+<tr>
+<td style="text-align: left;">The number of blobs is counted to</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">in a glyph region.</td>
+</tr>
+<tr>
+<td style="text-align: left;">produce the number in each number</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">string. “1:2:4” has at most 4 blobs</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">in a region.</td>
+</tr>
+</tbody>
+</table>
+<p>Dtouch ……</p>
+
+<p>A note on dtouch markers: 1:2:4 is the number string for a marker or glyph with three regions. The glyph itself is anything topologically like a three sided domino with 1, 2 and 4 spots respectivly.</p>
+
+<h2 id="proposed_customer_experience">Proposed Customer Experience</h2>
+
+<p>1) Customer at Table ………………..</p>
+
+<p>Customer enters restaurant. Waiter shows customer’s party to a table. Multiple parties may occupy a table. Customer takes some action to identify himself to the restaurant. Customer selects food from menu. Party orders food from waiter. Waiter brings food. Customer presents food to system (in a specific manner). System delivers recipe information to Customer’s mobile phone.</p>
+
+<p>2) Customer at Home ……………….</p>
+
+<p>Customer logs in to restaurant website (identifying himself). Website lists recent visits and the foods delivered to the customer’s table for a period following the time of identification at the restaurant.</p>
+
+<h2 id="mappings">Mappings</h2>
+
+<p>In order to achieve the simple scenarios described above there are a number of mappings of identity to be created, managed and removed.</p>
+
+<p>These required mappings are:</p>
+
+<ul>
+<li>Customer to table</li>
+
+<li>Food to Marker</li>
+
+<li>Marker to Table</li>
+</ul>
+<p>There exists a range of relevant secondary mappings which may be more or less complex depending upon design decisions. These are:</p>
+
+<ul>
+<li>Camera to Table</li>
+
+<li>Marker to Dish</li>
+
+<li>Marker/Table pair to Food</li>
+</ul>
+<p>Basic Assumptions ……………..</p>
+
+<p>A camera is fixed at a table and so identifies the table: * Camera identity maps trivially to Table identity.</p>
+
+<p>An android camera is used by a customer and so identifies the customer: * Android camera maps trivially to Customer identity.</p>
+
+<h2 id="customer_to_table">Customer to table</h2>
+
+<p>Customer identity ……………..</p>
+
+<p>Each customer engaging in the service must be uniquely identified. This can be achieved by a number of mechanisms depending for a large part on the size of the potential pool of customers to be mapped.</p>
+
+<ul>
+<li>Dtouch code-space is suitable for identifying from a pool of no more than one or two hundred customers and possibly very much less. See below for discussion.</li>
+
+<li>QR is capable of being processed visually. The code-space can comfortably encode from a pool of many billions.</li>
+
+<li>Other no visual assignments of identity such as user-id would be possible and support an unrestricted pool of customers.</li>
+</ul>
+<p>The choice here has implications for the mapping of customer to table.</p>
+
+<p>Table identity …………..</p>
+
+<p>A table can be identified from a pool of around 20. Typically the restaurant staff know each table by number with the number changing infrequently.</p>
+
+<p>Importantly the identity of a table is not typically known to a customer.</p>
+
+<p>Customer to Table Mapping …………………….</p>
+
+<p>A customer may identify themselves to the system in a number of ways.</p>
+
+<ol>
+<li>By registering at a website for a dtouch glyph which uniquely identifies the customer. The Glyph can be presented to the table’s camera when seated to create a customer to table mapping.</li>
+
+<li>By registering at a website for a QR code which uniquely identifies the customer. The QR Code can be presented to the table’s camera when seated to create a customer to table mapping.</li>
+
+<li>By registering at a website for an identity number on a card which is processed by a waiter. Waiter enters the customer number and table number into the system via a console.</li>
+</ol>
+<p>issues ……</p>
+
+<ol>
+<li>
+<p>-: The usable code space of dtouch is too small for anything but a demo. +: Using dtouch gives the system an internal consistency. +: Lowers the burden on the waiter and maximises customer choice in involvement.</p>
+</li>
+
+<li>
+<p>-: Using QR codes undermines the aesthetic marker ethos. +: Maintains an interaction through vision paradigm.</p>
+</li>
+
+<li>
+<p>-: Undermines the interaction through vision paradigm, all interaction could be triggered via waters and actioned through the system console. +: Is discrete and unobtrusive.</p>
+</li>
+
+<li>
+<p>Other options?</p>
+</li>
+</ol>
+<h2 id="food_to_marker">Food to Marker</h2>
+
+<p>For a food to be identified by the system the marker on the dish on which the food is served must be mapped to the food over the time at which the marker is identified.</p>
+
+<p>Marker to dish …………..</p>
+
+<ol>
+<li>Each dish has a unique marker.</li>
+
+<li>Each dish type has a unique marker.</li>
+
+<li>Each dish has one of a limited range of markers.</li>
+</ol>
+<p>issues ……</p>
+
+<ol>
+<li>+: The ideal case for a system perspective. +: Reduces complexity in mappings. +: Reduces complexity in workflows. -: Requires as many designs as restaurant has dishes. -: Each broken plate would need to be replaced with the same or new unique design. +/-: Designers need to produce high number of unique designs. Estimate at greater than 400 dishes.</li>
+
+<li>Workable only if each food is only served on one dish type. +: Reduced complexity in mappings. +: Mappings easily understood. +: Designs limited to number of foods (&lt; 50).</li>
+
+<li>+: Simple mapping if each food is only served on a dish with a particular marker. -: Requires managing stocks of dishes per food. -: Dynamic mapping of food to marker/table pair over time is possible but complex. Discussed below.</li>
+</ol>
+<p>Dynamic Mapping of Food to Marker ……………………………</p>
+
+<p>If case 1 (unique markers per dish) is rejected as impracticable and case 2 (unique markers per dish type and fixed food per dish type) is rejected as undesirable then a marker can only have ‘meaning’ within a context that includes time, food, table and marker and only then if care is taken to ensure that the tuple of <span>table, food, marker</span> is unique at the point that identification is requested. In other words a marker can only mean a food when presented at a particular table over a particular time and the system has ensured that no other identical marker with a different food has been served to that table in the ‘recent past’.</p>
+
+<p>Marker to table …………… To ensure that a marker is unique on a table in a time period a clean dish can be selected in the kitchen and checked against the required table. When a dish marker that is unique to the table in recent past has been found the system needs to be informed of the mapping of dish marker to table. One possibility for this is to use a camera at the service area and present a proposed plate at the same time as a dtouch ‘tag’ identifying the required table. The system can report a non-unique dish/table pair prompting the waiter to retry with a different dish.</p>
+
+<p>Marker to table time period ………………………</p>
+
+<p>The uniqueness of the <span>marker,table</span> tuple must only be maintained over sufficient time as to avoid ambiguity. For each party the time of interest is from arrival to departure, for the system however this is confounded by the property that multiple parties share a table. Because the times of relevance for parties overlap, a proposed approach is to ensure that the time period before which a marker can be reused on a table is longer than the longest expected stay of a party. We expect this to be two hours.</p>
+
+<p>Mapping food to dish …………………</p>
+
+<p>In the case of non-unique mappings of dish marker to food the mapping must be created dynamically. That is the system must be told which food is on the dish at any one time. One way to do this would be with a mechanism similar to that proposed to map plate to table. Using the service area camera a validated dish prepared with food can be presented to the vision system along side a dtouch tag identifying the food and a dtouch tag reasserting the table.</p>
+
+<p>Clearing down ………….</p>
+
+<p>Once the mapping of food to marker is established it must be maintained for an appropriate time at least until the customer’s last opportunity to interrogate the dish. Several options exist for clearing down the mapping.</p>
+
+<ol>
+<li>Timeout</li>
+
+<li>Cleared down by Waiter presenting empty plate and a ‘cleardown’ tag to the service area vision system.</li>
+
+<li>Other?</li>
+</ol>
+<p>issues ……</p>
+
+<ol>
+<li>+: Needs to be in place regardless of any other mechanism. +: It may be sufficient to maintain the mapping until the dish marker is permitted to be reused at the table.</li>
+
+<li>+: Provides positive end to mapping that is closer to facts. -: Presenting a used dish adds a burden to the staff. -: Presenting a used dish may add difficulties to the vision system through contamination of the markers.</li>
+</ol>
+<p>Hybrid Solution ……………</p>
+
+<p>One hybrid solution could be to fully constrain marker to dish type and partially constrain food to dish type such that each dish type can be used for a small number of foods. Here food defines dish type but dish type does not define food. This has the advantage of fitting with Busaba existing practice. The problem remains unsolved of managing the restricted mapping of food to marker.</p>
+
+<h2 id="marker_to_table">Marker to Table</h2>
+
+<p>In the case of the fixed cameras the problem of identifying the marker at a table is a trivial one as the camera the recognises the marker maps to the table at which the dish carrying that marker is present.</p>
+
+<p>In the case of a mobile phone (android) app. the mapping is less clear.</p>
+
+<p>Options …….</p>
+
+<ol>
+<li>Mapping via customer and customer’s mapping to table.</li>
+
+<li>Customer enters table number at point of identifying food.</li>
+
+<li>Other?</li>
+</ol>
+<p>Issues ……</p>
+
+<ol>
+<li>+: Simple and automatic. -: Customer may choose to identify a dish at another table (if a large party is split across tables for example).</li>
+
+<li>+: Can work across tables. -: Insecure (can reveal information about other tables).</li>
+</ol>
+<h2 id="vision_system_issues">Vision System Issues</h2>
+
+<p>Dtouch Codespace …………….</p>
+
+<p>The number of codes that can be represented by dtouch may be quite limited. The problem can be represented as a multiset with cardinality k taken from a set of size n where k is the number of dtouch regions and (n-1) is the maximum number of blobs in each region.</p>
+
+<p>The code space is represented by:</p>
+
+<p>$n^k ̅ /k!= (n(n+1)…(n+k-1))/k!$</p>
+
+<p>For small numbers it looks like this… <img src="/img/dtouch-codespace-shape.gif" alt="dtouch-codespace"></p>
+
+<p>In other words the number of number strings that can be expressed is small for our purposes unless the number of regions is above four and the maximum number of blobs in each region is above twelve.</p>
+
+<p>This table shows the number of codes that can be generated for various numbers of regions and blobs. Regions are in rows and blobs in columns.</p>
+
+<p>| R/B | <em>4</em> | <em>5</em> | <em>6</em> | <em>7</em> | <em>8</em> | <em>9</em> | <em>10</em> | | <em>3</em> | 10 | 15 | 21 | 28 | 36 | 45 | 55 | | <em>4</em> | 35 | 70 | 216 | 210 | 330 | 495 | 715 | | <em>5</em> | 56 | 126 | 256 | 462 | 792 | 1287| 2002 | | <em>6</em> | 84 | 210 | 462 | 924 | 1716| 3003| 5005 | | <em>7</em> | 120 | 330 | 792 | 1716| 3432| 6435| 11440 | | <em>8</em> | 165 | 495 | 1287| 3003| 6435|12870| 24310 |</p>
+
+<p>Dtouch Recognition Stability ………………………..</p>
+
+<p>Overview ……..</p>
+
+<p>Existing implementations of dtouch process video on a frame by frame basis. Each video frame being treated as a still image. The vision system converts the image to grayscale and then applies a threshold such that each pixel takes on one of two values - black or white. The code then scans the image to discover the map of connected regions (blocks of continuous black or white). This map or tree of connected regions is scanned for relations that conform to the rules for a dtouch marker (identify a root with at least three regions where no more than two are empty and each region contains only leaf regions). These rules create the following constraints on markers.</p>
+
+<ol>
+<li>It is not a glyph if there are two or fewer regions.</li>
+
+<li>It is not a glyph if there are more than two empty regions.</li>
+
+<li>It is not a glyph if region contains a blob that contains another region.</li>
+</ol>
+<p>There are a number of problems in using dtouch as the visual recognition system.</p>
+
+<p>Movement …….. The existing dtouch implementations are poor at tracking movement as motion blur prevents detection and may produce spurious marker detection.</p>
+
+<p>Specular Reflection ……………….</p>
+
+<p>To the image processing specular reflection is indistinguishable from the design of the glyph. Its effects are typically to break a line or obscure a mark. While this often invalidates the recognition by breaking rules 1 above, it will frequently distort the recognition by merging regions or obscuring only some blobs.</p>
+
+<p>Code Resilience …………….</p>
+
+<p>One of the most significant operational problems with using dtouch to determine identity is likely to be mis-recognition. Perturbations of the input frequently cause more or less stable recognition of the wrong value. This can be mitigated against by constraining the system to recognise only those codes that are expected but this solution is only of value when the number of codes in use is small compared to the number of possible codes.</p>
+
+<p>To prevent the vision system mis-reporting codes capacity to distinguish valid to artificial codes should be designed on top of dtouch. Options include</p>
+
+<ol>
+<li>Constrain numbers of blobs to be divisible by some small number (3)</li>
+
+<li>Constrain numbers of blobs to be identical in two regions</li>
+
+<li>Use one region as a checksum of the others - this may be functionally identical to 1.</li>
+
+<li>Build additional constraints into valid code design beyond those in dtouch</li>
+</ol>
+<p>In general the stronger the resilience of the coding system the greater the required codespace. Larger codespace constrains the designers more than smaller codespaces.</p>
+
+<p>Codespace size …………..</p>
+
+<p>The size of the required dtouch codespace will be dependent upon decisions made relating to options in other parts of this document. However, if the system is to operate beyond a demonstration context then dishes should be designed with sufficient codes to encode all menu items (50) and to allow a low probability of selecting a repeated code for a table within the requisite mapping time (80).</p>
+
+<p>Independent dtouch codes may also be required for tags to encode table and food (20+50) giving a codespace requirement of at least 150 and possibly significantly higher.</p>
+
+<p>With a checksum for resilience this can be achieved by designing codes with four regions each of which can hold up to sixteen blobs or five each of which can hold up to six blobs.</p>
+
+<pre>4x16
+5x6</pre>
+
+<p>Resolution ……….</p>
+
+<p>The fixed high definition camera can resolve 1280 x 740 pixels. We estimate that for the initial demonstration the camera will be mounted in the lampshade above the table at a height of one meter.</p>
+
+<p>The camera view area is described by a rectangular pyramid with proportions hight:1, width 0.8 and depth 0.46 (with HD aspect ratio).</p>
+
+<ul>
+<li>At 1 meter mounting camera coverage is <em>80cm x 46cm</em>
+</li>
+
+<li>At 1280x740 acuity is 1280/800 pixels/mm 1.6 pixels/mm</li>
+
+<li>At <em>640x480</em> acuity is 800/480 mm/pixel or 1.6 mm/pixel</li>
+</ul>
+<p>While high resolution allows detection of fine lines it also allows small discrepancies to be detected as nested regions which invalidate the codes. Because of this it is unlikely that we can work with an acuity finer than 1.6mm/pixel.</p>
+
+<p>This creates a lower limit on the thickness and separation of each line that comprises the glyph.</p>
+
+<h2 id="dtouch_glyphs_design_constraints">Dtouch Glyphs Design Constraints</h2>
+
+<p>Taken together this information suggests a set of constraints on the ceramic designs as follows.</p>
+
+<ol>
+<li>Each marker has five regions.</li>
+
+<li>Each region must encode up to six blobs.</li>
+
+<li>Each line/point must be at least 1.6mm thick.</li>
+
+<li>Each line/point must be separated from every other by at least 1.6mm.</li>
+
+<li>Specular reflection should be minimised as far as possible.</li>
+</ol>
+<h1 id="possible_workflow">Possible Workflow</h1>
+
+<p>One complete and practicable solution to the workflow is presented below.</p>
+
+<p><img src="/img/tt-demo-architecture.png" alt=""></p>
+
+<ol>
+<li>Joe sits at table and places loyalty card or phone displaying QR code to the centre of table where a camera picks it up and registers it as indicating Joe’s presence at the table. Lights at the table pulse briefly to indicate recognition. Joe orders his meal from the waiter and the order goes to the kitchen where a chef prepares the food.</li>
+
+<li>Chef randomly selects a serving dish from a range of 80 different designs each mapping to an individual dtouch code. Each dish carries an identifiable design when holding food. When selecting the dish Chef asks the information system “Can I use this dish on this table”: Chef presents the dish along with a card showing table number to a camera at the service area. The cards showing table numbers also carry dtouch markers allocated to each table making the card machine readable. In response to the dish and table marker being recognised the system feeds back to the chef a ‘yes/no’ response to indicate if that design has been used at that table in the past two hours. If necessary chef selects a different dish to ensure all dishes on a table are unique over a two hour time span.</li>
+
+<li>Chef serves food to selected dish and waiter presents dish to the service area camera along with a card representing the food which is served on the dish. The information system feeds back once the food is registered to the dish. The dish is served to the table.</li>
+
+<li>Joe, wishing to learn more about the dish places it in the centre of the table. He receives an mmx message on his phone with a photo of the dish annotated with name and a link to further information.</li>
+
+<li>Later in the day Joe wishes to recap the recipes. He goes to a website and logs in to find photos and details of all of the food served to his table up to one hour following the point at which he registered at the table.</li>
+</ol>
+</div>
+  </article><div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+  </div>
+  <script type="text/javascript">
+      var disqus_shortname = 'lightmind'; 
+      //var disqus_identifier = ;
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+</div>
+
+      
+    </div>
+
+    <aside><h2>
+        <a href="/archives">Articles</a>
+      </h2>
+      <ol>
+<li>
+<a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
+</li>
+          
+      </ol>
+<h2>
+        <a href="/tags">Tags</a>
+      </h2>
+      <ul>
+<li>
+            <h5>software</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+<li>
+            <h5>other</h5>
+            <ul>
+<li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+</ul></aside><footer><a href="http://disqus.com" class="dsq-brlink">comments supported by <span class="logo-disqus">Disqus</span></a>
+    </footer>
+</div> <!--! end of #container -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/js/clearbox.js?dir=/js/clearbox" charset="UTF-8"></script><!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
+    window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script><!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started --><!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>

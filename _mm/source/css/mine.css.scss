@@ -1,5 +1,6 @@
 
-/*@import "compass";
+/*
+@import "compass";
 #main {
   @include float-left;
   border: 1px solid black;
@@ -16,12 +17,27 @@
 
 #container {
   @include container;
-  @include susy-grid-background;
+/*  @include susy-grid-background;
+*/
 }
 
 header {
   @include full;
-  @include prefix(3);
+  #hdr_img {
+      @include columns(3);
+      img {
+        margin-top: 20px;
+        margin-left: 30px;
+      }
+  }
+  h1 {
+      @include columns(5);
+      margin-top: 8px;
+  }
+  h2 {
+    @include columns(3);
+    margin-top: 40px;
+  }
 }
 
 #main {
@@ -84,7 +100,7 @@ $green:     #859900;
 /* light is default mode, so pair with general html definition */
 html, .light { 
   @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03);
-  @include accentize($yellow);
+  @include accentize($violet);
 }
 
 .dark  { 
@@ -96,34 +112,98 @@ html * {
     rendering-intent: auto;
 }
 
+header #op {
+  color: $cyan;
+}
+
+header #cl {
+  color: $base02;
+}
+
+header #on {
+  color: $magenta;
+}
+
+header h2 {
+  color: $yellow;
+}
+
+aside {
+  @include accentize($yellow);
+}
 
 /*~~~~~~~~~~~~~ Type ~~~~~~~~~~~~~*/
 
 /* Vertical Rhythm */
-/*
-@import "compass/typography/vertical_rhythm"
 
-$base-font-size   16px
-$base-line-height 24px
+@import "vertical_rhythm";
+
+$base-font-size:   16px;
+$base-line-height: 26px;
 
 body {
-    @include establish-baseline;
-}
-*/
-
-header {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    @include establish-baseline;
+    /*@include debug-vertical-alignment;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+header h1 {
+    @include adjust-font-size-to(60px,5);
+}
+
+h1 {
+    @include adjust-font-size-to(24px,2);
+}
+
+h2 {
+    @include adjust-font-size-to(24px,1.5);
+}
+
+@import "text-shadow";
+h1,h2,h3,h4,h5,h6,header {
+  @include text-shadow(rgba(255, 255, 255, 0.8) -1px -1px 0px);
+}
+
+aside li, aside h5 {
+  margin-top: 13px;
+  margin-bottom: 27px;
+}
+
+aside {
+  margin-top: 7px;
+}
+
+.entry-title {
+  margin-bottom: 26px;
 }
 
 p {
-    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     line-height: 1.4em;
     font-weight: lighter;
-    margin: 0 0 1.5em;
+    margin-top: 13px;
+    margin-bottom: 26px;
 }
 
+.highlight
+{
+  margin-bottom: 26px;
+}
+
+pre {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: lighter;
+    margin: 0 0 1.5em;
+    overflow-x: auto;
+    @include margin-trailer;  /* Attempt to maintain vertical rhythm */
+}
+
+/*~~~~~~~~~~~~~ Syntax Highlight ~~~~~~~~~~~~~*/
 
 /*Pygment Syntax Highlighting */
 .highlight .err{ border: 1px solid $red; } /* Error */
@@ -189,5 +269,71 @@ p {
 .highlight .vi { color: $yellow;} /* Name.Variable.Instance */
 .highlight .il { color: $blue;  } /* Literal.Number.Integer.Long */
 
-/* ~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~Division~~~~~~~~~ */
+
+@import "box-shadow";
+@import "border-radius";
+
+.entry-content h2, #main {
+  border-bottom: 1px solid $yellow; 
+  @include single-box-shadow(white, 0, 0, 1px);
+}
+
+pre {
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px inset);
+  padding: 8px;
+  @include border-radius(2px);
+}
+
+.entry-content img {
+  width: 100%;
+  height: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+}
+
+/* ~~~~~~~~~Header~~~~~~~~~ */
+
+header {
+  height: 180px;
+  background-color:  $base2;
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+  @include border-radius(4px);
+  background-image: url(/img/rue-stampt-m.png);
+  background-repeat: no-repeat;
+  background-position: 96% 90%;
+
+  h1 {
+    font-family: 'Terminal Dosis';
+    font-weight: 800;
+  }
+
+  h2 {
+    font-family: 'Terminal Dosis';
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+
+/* ~~~~~~~~~Aside~~~~~~~~~ */
+
+aside {
+  background-color:  transparentize($base02,0.4);
+  @include border-radius(4px);
+  @include box-shadow(rgba(0, 0, 0, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+
+  h1,h2,h3,h4,h5,h6,ul,ol{
+    @include text-shadow(transparentize($base03,0.4) 1px 1px 1px);
+    margin-bottom: 13px;
+  }
+  
+  ul, li a, a:visited, a:active {
+    color: $cyan;
+  }
+  
+  h2 {
+    margin-left: 8px;
+  }
+}
 

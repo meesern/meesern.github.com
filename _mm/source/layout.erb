@@ -1,12 +1,48 @@
 <!doctype html>
-<%= partial "headland" %>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <%= partial "metaland" %>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Lightmind</title>
+  <meta name="description" content="A blog about metaphor, ruby, software development, symbolic modelling and flexibility.">
+  <meta name="author" content="Rupert Meese">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/mine.css"/>
+  <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
+
+  <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
+       Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
+       for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="/js/libs/modernizr-2.0.6.min.js"></script>
 </head>
   <body>
   <div id="container">
     <header>
-      Output: On
+    <div id='hdr_img'>
+      <a href='/'>
+        <img src="/img/output-on-switch-147.png"/>
+      </a>
+    </div>
+    <h1>
+      <a href='/'>
+        <span id="op">Output</span><span id="cl">: </span><span id="on">On</span>
+      </a>
+    </h1>
+    <h2>
+    Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
+    </h2>
     </header>
 
     <div id="main" role="main">
@@ -20,21 +56,38 @@
 
     <aside>
       <h2>
-        Recent Articles
-        <a href="/archives">Archive</a>
+        <a href="/archives">Articles</a>
       </h2>
       <ol>
         <% data.blog.articles[0...10].each do |article| %>
           <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span></li>
+          <% end %>
+      </ol>
+      <h2>
+        <a href="/tags">Tags</a>
+      </h2>
+      <ul>
+        <% data.blog.tags.each do |slug, tag| %>
+          <li>
+            <h5><%= tag.title %></h5>
+            <ul>
+              <% tag.pages.each do |title, url| %>
+                <li><a href="<%= url %>"><%= title %></a></li>
+              <% end %>
+            </ul>
         <% end %>
-      </li>
+      </ul>
+      
     </aside>
     <footer>
-      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      <a href="http://disqus.com" class="dsq-brlink">comments supported by <span class="logo-disqus">Disqus</span></a>
     </footer>
   </div> <!--! end of #container -->
 
   <!-- JavaScript at the bottom for fast page loading -->
+  <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript" src="/js/clearbox.js?dir=/js/clearbox" charset="UTF-8"></script>
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -45,9 +98,8 @@
   <script defer src="/js/script.js"></script>
   <!-- end scripts -->
 
-  <!-- Change UA-XXXXX-X to be your site's ID -->
   <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
     });
