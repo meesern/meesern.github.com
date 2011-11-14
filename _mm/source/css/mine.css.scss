@@ -321,10 +321,10 @@ header {
 aside {
   background-color:  transparentize($base02,0.4);
   @include border-radius(4px);
-  @include box-shadow(rgba(0, 0, 0, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+  @include box-shadow($base03 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
 
   h1,h2,h3,h4,h5,h6,ul,ol{
-    @include text-shadow(transparentize($base03,0.4) 1px 1px 1px);
+    @include text-shadow(transparentize($base03,0.4) 1px 1px 2px);
     margin-bottom: 13px;
   }
   
