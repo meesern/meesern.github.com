@@ -139,7 +139,8 @@ aside {
 @import "vertical_rhythm";
 
 $base-font-size:   16px;
-$base-line-height: 26px;
+$base-line-height: 24px;
+$half-line:        12px;
 
 body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -156,11 +157,11 @@ header h1 {
 }
 
 h1 {
-    @include adjust-font-size-to(24px,2);
+    @include adjust-font-size-to($base-line-height,2);
 }
 
 h2 {
-    @include adjust-font-size-to(24px,1.5);
+    @include adjust-font-size-to($base-line-height,1.5);
 }
 
 @import "text-shadow";
@@ -169,8 +170,8 @@ h1,h2,h3,h4,h5,h6,header {
 }
 
 aside li, aside h5 {
-  margin-top: 13px;
-  margin-bottom: 27px;
+  margin-top: $half-line;
+  margin-bottom: $base-line-height;
 }
 
 aside {
@@ -178,25 +179,25 @@ aside {
 }
 
 .entry-title {
-  margin-bottom: 26px;
+  margin-bottom: $base-line-height;
 }
 
 p {
-    font-size: 1.2em;
-    line-height: 1.4em;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     font-weight: lighter;
-    margin-top: 13px;
-    margin-bottom: 26px;
+    margin-top:  $half-line;
+    margin-bottom: $base-line-height;
 }
 
 .highlight
 {
-  margin-bottom: 26px;
+  margin-bottom: $base-line-height;
 }
 
 pre {
-    font-size: 1.1em;
-    line-height: 1.4em;
+    font-size: $base-font-size - 2px;
+    line-height: $base-line-height;
     font-weight: lighter;
     margin: 0 0 1.5em;
     overflow-x: auto;
