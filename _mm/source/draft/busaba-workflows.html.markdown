@@ -142,7 +142,7 @@ Each customer engaging in the service must be uniquely identified.  This can be 
 
 * Dtouch code-space is suitable for identifying from a pool of no more than one or two hundred customers and possibly very much less.  See below for discussion.
 * QR is capable of being processed visually. The code-space can comfortably encode from a pool of many billions.
-* Other no visual assignments of identity such as user-id would be possible and support an unrestricted pool of customers.
+* Other non-visual assignments of identity such as user-id would be possible and support an unrestricted pool of customers.
 
 The choice here has implications for the mapping of customer to table.
 
@@ -211,7 +211,7 @@ issues
 Dynamic Mapping of Food to Marker
 .................................
 
-If case 1 (unique markers per dish) is rejected as impracticable and case 2 (unique markers per dish type and fixed food per dish type) is rejected as undesirable then a marker can only have 'meaning' within a context that includes time, food, table and marker and only then if care is taken to ensure that the tuple of [table, food, marker] is unique at the point that identification is requested.  In other words a marker can only mean a food when presented at a particular table over a particular time and the system has ensured that no other identical marker with a different food has been served to that table in the 'recent past'.
+If case 1 (unique markers per dish) is rejected as impracticable and case 2 (unique markers per dish type and fixed food per dish type) is rejected as undesirable then a marker can only have 'meaning' within a context that includes time, food, table and marker and only then if care is taken to ensure that the tuple of [table, food, marker] is unique at the point that identification is requested.  In other words a marker can only mean a food when presented at a particular table over a particular time and the system has ensured that no other identical marker with a different food has been served to that table in the 'recent past'.  Dynamic mapping of food to dish implies effort to manage and maintain the mappings of the part of restaurant staff.
 
 
 Marker to table
@@ -237,7 +237,7 @@ Clearing down
 Once the mapping of food to marker is established it must be maintained for an appropriate time at least until the customer's last opportunity to interrogate the dish.  Several options exist for clearing down the mapping.
 
 1. Timeout
-2. Cleared down by Waiter presenting empty plate and a 'cleardown' tag to the service area vision system.
+2. Cleared down by Waiter presenting empty plate and (possibly) a 'cleardown' tag to the service area vision system.
 3. Other?
 
 issues
@@ -293,7 +293,7 @@ $n^k ̅ /k!=  (n(n+1)…(n+k-1))/k!$
 For small numbers it looks like this...
 ![dtouch-codespace](/img/dtouch-codespace-shape.gif)
 
-In other words the number of number strings that can be expressed is small for our purposes unless the number of regions is above four and the maximum number of blobs in each region is above twelve.
+In other words the number of number strings that can be expressed is small for our purposes unless the number of regions is above four and the maximum number of blobs in each region is above six.
 
 This table shows the number of codes that can be generated for various numbers of regions and blobs.  Regions are in rows and blobs in columns.
 
@@ -324,7 +324,7 @@ There are a number of problems in using dtouch as the visual recognition system.
 
 Movement
 ........
-The existing dtouch implementations are poor at tracking movement as motion blur prevents detection and may produce spurious marker detection.
+The existing dtouch implementations are poor at tracking movement as motion blur interferes with correct detection, and may produce spurious marker detections.
 
 
 Specular Reflection
@@ -345,7 +345,7 @@ To prevent the vision system mis-reporting codes capacity to distinguish valid t
 3. Use one region as a checksum of the others - this may be functionally identical to 1.
 4. Build additional constraints into valid code design beyond those in dtouch 
 
-In general the stronger the resilience of the coding system the greater the required codespace.  Larger codespace constrains the designers more than smaller codespaces.
+In general resilient coding systems require significantly larger codespaces than are needed to simply encode the required values.  Larger codespaces, however, constrain the designers more than smaller codespaces as a larger numbers of blobs must be accommodated without reducing the minimum dimensions.
 
 
 Codespace size
@@ -355,7 +355,9 @@ The size of the required dtouch codespace will be dependent upon decisions made 
 
 Independent dtouch codes may also be required for tags to encode table and food (20+50) giving a codespace requirement of at least 150 and possibly significantly higher.
 
-With a checksum for resilience this can be achieved by designing codes with four regions each of which can hold up to sixteen blobs or five each of which can hold up to six blobs.
+Using the formula or table above a design with 3 regions and 16 blobs per region can represent 136 distinct numbers.  Using a formula with 4 regions and 6 blobs per region can represent 216 distinct numbers.
+
+Adding a single region with checksum for resilience we can achieve the desired codespace by designing codes with four regions each of which can hold up to sixteen blobs or five regions each of which can hold up to six blobs.
 
     4x16
     5x6
@@ -370,7 +372,7 @@ The camera view area is described by a rectangular pyramid with proportions high
 
 
 * At 1 meter mounting camera coverage is *80cm x 46cm*
-* At 1280x740 acuity is 1280/800 pixels/mm 1.6 pixels/mm
+* At 1280x740 acuity is  800/1280 mm/pixel 0.6 mm/pixel
 * At *640x480* acuity is 800/480 mm/pixel or 1.6 mm/pixel
 
 While high resolution allows detection of fine lines it also allows small discrepancies to be detected as nested regions which invalidate the codes.  Because of this it is unlikely that we can work with an acuity finer than 1.6mm/pixel.
@@ -385,8 +387,8 @@ Taken together this information suggests a set of constraints on the ceramic des
 
 1. Each marker has five regions.
 2. Each region must encode up to six blobs.
-3. Each line/point must be at least 1.6mm thick.
-4. Each line/point must be separated from every other by at least 1.6mm.
+3. Each line/point must be at least 3.2mm thick.
+4. Each line/point must be separated from every other by at least 3.2mm.
 5. Specular reflection should be minimised as far as possible.
 
 

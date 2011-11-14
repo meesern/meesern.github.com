@@ -151,7 +151,7 @@ Then:
     chmod 755 OpenQwaq-iptables 
     chmod 755 OpenQwaq-tunnel 
 
-Before I could use the OpenQwaq service scripts I had to install the function script available on linux distributions such as fedora but not ubuntu. I downloaded it from here <http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html> to `/etc/init.d` and chmodded...
+Before I could use the OpenQwaq service scripts I had to install the function script available on Linux distributions such as fedora but not ubuntu. I downloaded it from here <http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html> to `/etc/init.d` and chmodded...
 
     :::bash
     sudo mkdir -p rc.d/init.d
@@ -172,5 +172,7 @@ Next I configure to start on boot.  This is confounded in Ubuntu because startup
 Now I moved on to configuring the server, still following the outline described in detailedLinuxInstructions.  On the VM I opened `http://localhost/admin/serverconf.php?server=localhost`  If you are using the VM you should do this also and set appropriate email addresses.  I set mine to rupert.meese@nottingham.ac.uk.  *Change this!*
 
 After that the server can test itself through the script at this page: `http://localhost/admin/servertest.php`
+
+At this point my server reported a 500 error response to the servertest.php indicating that all was not well.  Some investigation showed that this url was the first to be passed directly to the qwaq server.  Apache passes the request through a local proxy to ensure authentication then on to the OpenQwaq server.  The OpenQwaq server, in turn, is a Squeak smalltalk virtual machine. Error and access logs showed little in the way of what was going wrong.
 
 
