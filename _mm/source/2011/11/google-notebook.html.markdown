@@ -39,6 +39,11 @@ This looks most like Google notebook and has good readability, import from noteb
 
 Evernote has a nice professional look and good import from notebook.  It's separation into notebooks is passable but the privacy feel a little compromised by a prominent 'all notes' notebook.  By far the worst thing about Evernote is the readability.  It seems to be designed for a small number of large notes not a stream of smaller ones, and so while the stream of notes is visible it is not readable but rather compressed in tiny text down a thin column.  Evernote nearly made it!
 
+Conclusion
+==========
+
+The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I've settled for Evernote but there is something quite unlikeable about the way it feels like it gets in the way of the notes and with every note I write I'm aware that there is not export functionality and so I'm getting tied in.
+
 
 [un]: (http://www.ubernote.com)
 [zh]: (http://notebook.zoho.com)

@@ -20,7 +20,7 @@
   <div id="container">
     <header><div id="hdr_img">
       <a href="/">
-        <img src="/img/output-on-switch-147.png"></a>
+        <img src="/img/output-on-switch-80.png"></a>
     </div>
     <h1>
       <a href="/">
@@ -30,7 +30,10 @@
     <h2>
     Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
     </h2>
-    </header><div id="main" role="main">
+    </header><div id="minor">
+    </div>
+
+    <div id="main" role="main">
       
         
         <div class="post">
@@ -192,7 +195,7 @@ chmod 755 OpenQwaq-tunnel
 </pre></div>
 
 
-<p>Before I could use the OpenQwaq service scripts I had to install the function script available on linux distributions such as fedora but not ubuntu. I downloaded it from here <a href="http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html">http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html</a> to <code>/etc/init.d</code> and chmodded…</p>
+<p>Before I could use the OpenQwaq service scripts I had to install the function script available on Linux distributions such as fedora but not ubuntu. I downloaded it from here <a href="http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html">http://www.linuxfromscratch.org/lfs/view/6.4/scripts/apds02.html</a> to <code>/etc/init.d</code> and chmodded…</p>
 
 <div class="highlight"><pre>sudo mkdir -p rc.d/init.d
 sudo chmod +x /etc/rd.d/init.d/functions
@@ -215,6 +218,8 @@ sudo chkconfig postfix 3
 <p>Now I moved on to configuring the server, still following the outline described in detailedLinuxInstructions. On the VM I opened <code>http://localhost/admin/serverconf.php?server=localhost</code> If you are using the VM you should do this also and set appropriate email addresses. I set mine to rupert.meese@nottingham.ac.uk. <em>Change this!</em></p>
 
 <p>After that the server can test itself through the script at this page: <code>http://localhost/admin/servertest.php</code></p>
+
+<p>At this point my server reported a 500 error response to the servertest.php indicating that all was not well. Some investigation showed that this url was the first to be passed directly to the qwaq server. Apache passes the request through a local proxy to ensure authentication then on to the OpenQwaq server. The OpenQwaq server, in turn, is a Squeak smalltalk virtual machine. Error and access logs showed little in the way of what was going wrong.</p>
     </div>
   </article><div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
@@ -239,6 +244,10 @@ sudo chkconfig postfix 3
       </h2>
       <ol>
 <li>
+<a href="/2011/11/google-notebook.html">Replacing Google Notebook</a> <span>Oct 11</span>
+</li>
+          
+          <li>
 <a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
 </li>
           
@@ -258,6 +267,13 @@ sudo chkconfig postfix 3
             <h5>other</h5>
             <ul>
 <li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+<li>
+            <h5>writing</h5>
+            <ul>
+<li><a href="/2011/11/google-notebook.html">Replacing Google Notebook</a></li>
               
             </ul>
 </li>

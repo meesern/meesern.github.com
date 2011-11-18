@@ -20,7 +20,7 @@
   <div id="container">
     <header><div id="hdr_img">
       <a href="/">
-        <img src="/img/output-on-switch-147.png"></a>
+        <img src="/img/output-on-switch-80.png"></a>
     </div>
     <h1>
       <a href="/">
@@ -30,7 +30,10 @@
     <h2>
     Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
     </h2>
-    </header><div id="main" role="main">
+    </header><div id="minor">
+    </div>
+
+    <div id="main" role="main">
       
         
         <div class="post">
@@ -356,7 +359,7 @@
 
 <li>QR is capable of being processed visually. The code-space can comfortably encode from a pool of many billions.</li>
 
-<li>Other no visual assignments of identity such as user-id would be possible and support an unrestricted pool of customers.</li>
+<li>Other non-visual assignments of identity such as user-id would be possible and support an unrestricted pool of customers.</li>
 </ul>
 <p>The choice here has implications for the mapping of customer to table.</p>
 
@@ -420,7 +423,7 @@
 </ol>
 <p>Dynamic Mapping of Food to Marker ……………………………</p>
 
-<p>If case 1 (unique markers per dish) is rejected as impracticable and case 2 (unique markers per dish type and fixed food per dish type) is rejected as undesirable then a marker can only have ‘meaning’ within a context that includes time, food, table and marker and only then if care is taken to ensure that the tuple of <span>table, food, marker</span> is unique at the point that identification is requested. In other words a marker can only mean a food when presented at a particular table over a particular time and the system has ensured that no other identical marker with a different food has been served to that table in the ‘recent past’.</p>
+<p>If case 1 (unique markers per dish) is rejected as impracticable and case 2 (unique markers per dish type and fixed food per dish type) is rejected as undesirable then a marker can only have ‘meaning’ within a context that includes time, food, table and marker and only then if care is taken to ensure that the tuple of <span>table, food, marker</span> is unique at the point that identification is requested. In other words a marker can only mean a food when presented at a particular table over a particular time and the system has ensured that no other identical marker with a different food has been served to that table in the ‘recent past’. Dynamic mapping of food to dish implies effort to manage and maintain the mappings of the part of restaurant staff.</p>
 
 <p>Marker to table …………… To ensure that a marker is unique on a table in a time period a clean dish can be selected in the kitchen and checked against the required table. When a dish marker that is unique to the table in recent past has been found the system needs to be informed of the mapping of dish marker to table. One possibility for this is to use a camera at the service area and present a proposed plate at the same time as a dtouch ‘tag’ identifying the required table. The system can report a non-unique dish/table pair prompting the waiter to retry with a different dish.</p>
 
@@ -439,7 +442,7 @@
 <ol>
 <li>Timeout</li>
 
-<li>Cleared down by Waiter presenting empty plate and a ‘cleardown’ tag to the service area vision system.</li>
+<li>Cleared down by Waiter presenting empty plate and (possibly) a ‘cleardown’ tag to the service area vision system.</li>
 
 <li>Other?</li>
 </ol>
@@ -488,7 +491,7 @@
 
 <p>For small numbers it looks like this… <img src="/img/dtouch-codespace-shape.gif" alt="dtouch-codespace"></p>
 
-<p>In other words the number of number strings that can be expressed is small for our purposes unless the number of regions is above four and the maximum number of blobs in each region is above twelve.</p>
+<p>In other words the number of number strings that can be expressed is small for our purposes unless the number of regions is above four and the maximum number of blobs in each region is above six.</p>
 
 <p>This table shows the number of codes that can be generated for various numbers of regions and blobs. Regions are in rows and blobs in columns.</p>
 
@@ -509,7 +512,7 @@
 </ol>
 <p>There are a number of problems in using dtouch as the visual recognition system.</p>
 
-<p>Movement …….. The existing dtouch implementations are poor at tracking movement as motion blur prevents detection and may produce spurious marker detection.</p>
+<p>Movement …….. The existing dtouch implementations are poor at tracking movement as motion blur interferes with correct detection, and may produce spurious marker detections.</p>
 
 <p>Specular Reflection ……………….</p>
 
@@ -530,7 +533,7 @@
 
 <li>Build additional constraints into valid code design beyond those in dtouch</li>
 </ol>
-<p>In general the stronger the resilience of the coding system the greater the required codespace. Larger codespace constrains the designers more than smaller codespaces.</p>
+<p>In general resilient coding systems require significantly larger codespaces than are needed to simply encode the required values. Larger codespaces, however, constrain the designers more than smaller codespaces as a larger numbers of blobs must be accommodated without reducing the minimum dimensions.</p>
 
 <p>Codespace size …………..</p>
 
@@ -538,7 +541,9 @@
 
 <p>Independent dtouch codes may also be required for tags to encode table and food (20+50) giving a codespace requirement of at least 150 and possibly significantly higher.</p>
 
-<p>With a checksum for resilience this can be achieved by designing codes with four regions each of which can hold up to sixteen blobs or five each of which can hold up to six blobs.</p>
+<p>Using the formula or table above a design with 3 regions and 16 blobs per region can represent 136 distinct numbers. Using a formula with 4 regions and 6 blobs per region can represent 216 distinct numbers.</p>
+
+<p>Adding a single region with checksum for resilience we can achieve the desired codespace by designing codes with four regions each of which can hold up to sixteen blobs or five regions each of which can hold up to six blobs.</p>
 
 <pre>4x16
 5x6</pre>
@@ -553,7 +558,7 @@
 <li>At 1 meter mounting camera coverage is <em>80cm x 46cm</em>
 </li>
 
-<li>At 1280x740 acuity is 1280/800 pixels/mm 1.6 pixels/mm</li>
+<li>At 1280x740 acuity is 800/1280 mm/pixel 0.6 mm/pixel</li>
 
 <li>At <em>640x480</em> acuity is 800/480 mm/pixel or 1.6 mm/pixel</li>
 </ul>
@@ -570,9 +575,9 @@
 
 <li>Each region must encode up to six blobs.</li>
 
-<li>Each line/point must be at least 1.6mm thick.</li>
+<li>Each line/point must be at least 3.2mm thick.</li>
 
-<li>Each line/point must be separated from every other by at least 1.6mm.</li>
+<li>Each line/point must be separated from every other by at least 3.2mm.</li>
 
 <li>Specular reflection should be minimised as far as possible.</li>
 </ol>
@@ -617,6 +622,10 @@
       </h2>
       <ol>
 <li>
+<a href="/2011/11/google-notebook.html">Replacing Google Notebook</a> <span>Oct 11</span>
+</li>
+          
+          <li>
 <a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
 </li>
           
@@ -636,6 +645,13 @@
             <h5>other</h5>
             <ul>
 <li><a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a></li>
+              
+            </ul>
+</li>
+<li>
+            <h5>writing</h5>
+            <ul>
+<li><a href="/2011/11/google-notebook.html">Replacing Google Notebook</a></li>
               
             </ul>
 </li>
