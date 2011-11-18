@@ -175,4 +175,50 @@ After that the server can test itself through the script at this page: `http://l
 
 At this point my server reported a 500 error response to the servertest.php indicating that all was not well.  Some investigation showed that this url was the first to be passed directly to the qwaq server.  Apache passes the request through a local proxy to ensure authentication then on to the OpenQwaq server.  The OpenQwaq server, in turn, is a Squeak smalltalk virtual machine. Error and access logs showed little in the way of what was going wrong.
 
+I started to get somewhere once I looked directly into the server at this URL: `http://localhost:9991/forums/testServer`  Which gave the same 500 error response but this time with all the additional information that one needs to make sense of the problem.  In this case it looked something like this:
+
+
+    QSStorageODBC(Object)>>error:
+            Receiver: a QSStorageODBC
+            Arguments and temporary variables: 
+                    aString: 	'Database error'
+
+            Receiver's instance variables: 
+                    dirtySet: 	an IdentitySet()
+                    plainTextPasswords: 	false
+                    odbc: 	an ODBCThreadedConnection, dsn:OpenQwaqData, user:openqwaq, password:openqwaq (not connected) (open transaction)
+                    objCache: 	a Dictionary()
+                    dsn: 	'OpenQwaqData'
+                    password: 	'openqwaq'
+                    username: 	'openqwaq'
+    [] in QSStorageODBC>>execute:args:
+            Receiver: a QSStorageODBC
+            Arguments and temporary variables: 
+                    query: 	'SELECT * FROM servers WHERE pool = ?'
+                    args: 	#('')
+                    retry: 	3
+                    ex: 	Error: Call to external function failed
+    
+    etc...
+    
+Which told me at least that the problem was with the ODBC database.  From the "(not connected)" part it seemed as though the connection might not be being made properly and this seemed most likely.
+
+    isql -v OpenQwaqData openqwaq openqwaq
+
+However, showed me that I could connect to the database from outside the squeak smalltalk environment so the problem had to be elsewhere.  isql even ran the query
+    
+    :::sql
+    SELECT * FROM servers WHERE pool = ''
+
+Which is what the trace showed the openqwaq server was trying to do when it failed.  This, then seemed as though squeak was not able to talk to ODBC.  Sure enough setting up ODBC to log accesses:
+
+    :::bash
+    sudo vi /etc/odbcinst.ini
+        [ODBC]
+        TraceFile = /tmp/odbc.log
+        Trace = Yes
+    
+showed that `isql` was talking to odbc as expected but odbc was not hearing a squeak out of the openqwaq server.
+
+In response to a call out to the openQwaq forum Barbara Hohensee pointed me to another Ubuntu [OpenQwaq page, here,](https://sites.google.com/site/openqwaquserpraxisguide/home/advanced-user-guides/openqwaq-test-server-ubuntu) that you might want to look over.
 
