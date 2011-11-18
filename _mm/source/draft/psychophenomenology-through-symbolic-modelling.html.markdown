@@ -1,17 +1,17 @@
 --- 
-title: Making References Work
-date: 08/11/2011
-tags: writing
+title: Psychophenomenology Through Symbolic Modelling
+date: 18/11/2011
+tags: Phenomenology, SymMod
 ---
 
-Making References Work
-=======================
+A conjecture
+=============
 
-So I have a vision for my blog of using a single writing format to create blog posts and academic papers.  I use [Maruku](http://maruku.rubyforge.org/index.html) in my blog to convert the elegantly formatted text files which I write into elegantly formatted HTML files which go on the web (see [The World's Most Satisfying Blog](http://blog.lightmind.co.uk/2011/11/satisfying-blog.html).  Pleasantly Maruku supports export to Latex making the possibility of the transition from blog post to academic paper seem plausible.  The single biggest issue to solve is making references elegant.
+That there exists a mechanism through which personal and subjective experience can 
 
 
-The ideal
-----------
+Metaphor
+--------
 
 What I would like is to gather references for the books and articles that I read in a simple and accessible system.  Preferably with the absolute minimum of tedious and error prone typing.  When I come to reference a source I would like to be able to search through my catalog (preferably full text) to find the source that I have in mind and identify it by a simple knowable key - perhaps a composite of first author, year and number (e.g.  `thibodeau201101`  Then to include it in my article I would like to use a simple markup, perhaps like `[1]{thibodeau201101}` and have that automatically create a footnote to the citation in the case of formatting to a web page, or a bibliographic entry in the case of formatting a paper.
 
@@ -32,7 +32,5 @@ For academic articles this problem of collecting the reference is nicely solved 
 Citing
 -------
 
-BiBTeX uses a unique key for each entry based on the surname of the first author, the year of publication and the first word of the title.  Since this is quite constructable while typing it is ideal for using as the markup reference.  So in order to have a well formatted citation to "Metaphors we think by" by Paul Thibodeau I just want to include something like `[^thibodeau2011metaphors]()` and have my blog source the citation from citeulike and format it nicely for web or paper.
-
-[^Alechina//:10a]() considers reasoning about coalitions of resource bound agents.
+BiBTeX uses a unique key for each entry based on the surname of the first author, the year of publication and the first word of the title.  Since this is quite constructable while typing it is ideal for using as the markup reference.  So in order to have a well formatted citation to "Metaphors we think by" by Paul Thibodeau I just want to include something like `[^{thibodeau2011metaphors}]` and have my blog source the citation from citeulike and format it nicely for web or paper.
 
