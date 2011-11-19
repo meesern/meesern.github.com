@@ -19,7 +19,7 @@
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="/css/mine.css"/>
-  <link href="jquery.tweet.css" rel="stylesheet"/>
+  <link href="/css/jquery.tweet.css" rel="stylesheet"/>
   <link rel="dns-prefetch" href="//ajax.googleapis.com"/>
   <link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 
@@ -47,6 +47,7 @@
     </header>
 
     <div id='minor'>
+      <div class="tweet"></div>
     </div>
 
     <div id="main" role="main">
@@ -102,7 +103,8 @@
           $(".tweet").tweet({
               username: "ruemeese",
               avatar_size: 32,
-              count: 3,
+              count: <%=data.tweets.count %>,
+              query: "<%=data.tweets.query %>",
               loading_text: "loading tweets..."
           });
       });

@@ -49,7 +49,7 @@ header {
   @include alpha;
   position: relative;
   height: 600px;
-  background-image: url(/img/sufi.jpeg);
+  //background-image: url(/img/sufi.jpeg);
   background-repeat: no-repeat;
   background-position: -409px 13px;
   @include border-radius(4px);
@@ -188,8 +188,7 @@ aside li, aside h5 {
 }
 
 aside {
-  padding-top: 4px;
-  margin-top: 7px;
+  padding-top: 11px;
 }
 
 .entry-title {
@@ -200,8 +199,16 @@ p, li, ol {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: lighter;
+}
+
+p{
     margin-top:  $half-line;
     margin-bottom: $base-line-height;
+}
+
+li, ol {
+    margin-top:  $half-line;
+    margin-bottom: $half-line;
 }
 
 .highlight
@@ -331,7 +338,7 @@ header {
 /* ~~~~~~~~~Aside~~~~~~~~~ */
 
 aside {
-  background-color:  transparentize($base02,0.4);
+  background-color:  transparentize($base02,0.1);
   @include border-radius(4px);
   @include box-shadow($base03 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
 
@@ -351,7 +358,7 @@ aside {
   }
   
   h2 {
-    margin-left: 8px;
+    margin-left: 16px;
   }
 }
 

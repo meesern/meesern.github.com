@@ -1,6 +1,6 @@
 --- 
 title:  The World's Most Satisfying Blogging Platform
-date:   05/11/2011
+date:   05/Nov/2011
 tags:   software, other
 ---
 

@@ -1,6 +1,6 @@
 --- 
 title:  Busaba Trackable Tableware Demo Workflow Discussion Document
-date:   08/11/2011
+date:   08/Nov/2011
 tags:   Software, Trackable Tableware, Object Container
 maths:  true
 ---

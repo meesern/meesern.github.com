@@ -1,6 +1,6 @@
 --- 
 title: The Case for Psychophenomenology
-date: 10/11/2011
+date: 10/Nov/2011
 tags: phenomenology
 side-image: 
 ---
