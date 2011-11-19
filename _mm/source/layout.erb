@@ -101,9 +101,9 @@
   <script type='text/javascript'>
       jQuery(function($){
           $(".tweet").tweet({
-              username: "ruemeese",
+              username: "<%=data.tweets.username%>",
               avatar_size: 32,
-              count: <%=data.tweets.count %>,
+              count: <%=data.tweets.tweets %>,
               query: "<%=data.tweets.query %>",
               loading_text: "loading tweets..."
           });
