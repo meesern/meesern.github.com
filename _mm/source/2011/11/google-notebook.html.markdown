@@ -1,6 +1,6 @@
 --- 
 title: Replacing Google Notebook
-date: 10/11/2011
+date: 10/Nov/2011
 tags: writing
 ---
 

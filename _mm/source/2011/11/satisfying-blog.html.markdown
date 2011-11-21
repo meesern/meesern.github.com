@@ -1,11 +1,10 @@
 --- 
 title:  The World's Most Satisfying Blogging Platform
-date:   05/11/2011
+date:   05/Nov/2011
 tags:   software, other
-draft:  true
 ---
 
-I Only Wanted a Simple Blog
+I only wanted a simple blog
 ---------------------------
 
 I suppose that it is quite typical.  I set out to start a simple blog to write about the many interesting things that I get involved with.  Simple - go to [wordpress.com](http://wordpress.com) and voilà!  A Blog! Great, but I was going to be putting quite a number of code excerpts into the posts and wanted to be sure that syntax highlighting in multiple languages would work.  It's easy with a wordpress plugin but less so on wordpress.com as it does not support custom css/html in the template.  According to [this great guide](http://heisencoder.net/2009/01/adding-syntax-highlighting-to-blogger.html) to syntax highlighting in blogger [Blogger](http://www.blogger.com) does support editing the template HTML and so I created a blog there as well to compare the two. 

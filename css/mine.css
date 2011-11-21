@@ -59,7 +59,6 @@ header {
   margin-left: 1.37%;
   position: relative;
   height: 600px;
-  background-image: url(/img/sufi.jpeg);
   background-repeat: no-repeat;
   background-position: -409px 13px;
   -moz-border-radius: 4px;
@@ -185,8 +184,7 @@ aside li, aside h5 {
   margin-bottom: 12px; }
 
 aside {
-  padding-top: 4px;
-  margin-top: 7px; }
+  padding-top: 11px; }
 
 .entry-title {
   margin-bottom: 24px; }
@@ -194,9 +192,15 @@ aside {
 p, li, ol {
   font-size: 16px;
   line-height: 24px;
-  font-weight: lighter;
+  font-weight: lighter; }
+
+p {
   margin-top: 12px;
   margin-bottom: 24px; }
+
+li, ol {
+  margin-top: 12px;
+  margin-bottom: 12px; }
 
 .highlight {
   margin-bottom: 24px; }
@@ -537,7 +541,7 @@ header {
 
 /* ~~~~~~~~~Aside~~~~~~~~~ */
 aside {
-  background-color: rgba(7, 54, 66, 0.6);
+  background-color: rgba(7, 54, 66, 0.9);
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -o-border-radius: 4px;
@@ -558,4 +562,4 @@ aside {
   aside ul, aside li a, aside a:visited, aside a:active {
     color: #2aa198; }
   aside h2 {
-    margin-left: 8px; }
+    margin-left: 16px; }

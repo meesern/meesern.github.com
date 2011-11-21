@@ -1,6 +1,6 @@
 --- 
 title: The Landscape of Why?
-date: 08/11/2011
+date: 08/Nov/2011
 tags: [Symbolic Modelling, Modelling, Society]
 ---
 

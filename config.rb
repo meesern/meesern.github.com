@@ -35,6 +35,6 @@ module Drafting
   end
 end
 
-acrivate Drafting
+activate Drafting
 
 

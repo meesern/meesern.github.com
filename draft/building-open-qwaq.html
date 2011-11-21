@@ -10,6 +10,7 @@
 <meta name="author" content="Rupert Meese">
 <!-- Mobile viewport optimized: j.mp/bplateviewport --><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="/css/mine.css">
+<link href="/css/jquery.tweet.css" rel="stylesheet">
 <link rel="dns-prefetch" href="//ajax.googleapis.com">
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
@@ -31,6 +32,7 @@
     Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
     </h2>
     </header><div id="minor">
+      <div class="tweet"></div>
     </div>
 
     <div id="main" role="main">
@@ -39,7 +41,7 @@
         <div class="post">
   <article class="hentry"><h1 class="entry-title">
       Building Open Qwaq 
-      <time class="updated" pubdate>Jul 11 2011</time>
+      <time class="updated" pubdate>Nov  7 2011</time>
 </h1>
     
     <div class="entry-content">
@@ -220,6 +222,54 @@ sudo chkconfig postfix 3
 <p>After that the server can test itself through the script at this page: <code>http://localhost/admin/servertest.php</code></p>
 
 <p>At this point my server reported a 500 error response to the servertest.php indicating that all was not well. Some investigation showed that this url was the first to be passed directly to the qwaq server. Apache passes the request through a local proxy to ensure authentication then on to the OpenQwaq server. The OpenQwaq server, in turn, is a Squeak smalltalk virtual machine. Error and access logs showed little in the way of what was going wrong.</p>
+
+<p>I started to get somewhere once I looked directly into the server at this URL: <code>http://localhost:9991/forums/testServer</code> Which gave the same 500 error response but this time with all the additional information that one needs to make sense of the problem. In this case it looked something like this:</p>
+
+<pre>QSStorageODBC(Object)&gt;&gt;error:
+        Receiver: a QSStorageODBC
+        Arguments and temporary variables: 
+                aString: 	'Database error'
+
+        Receiver's instance variables: 
+                dirtySet: 	an IdentitySet()
+                plainTextPasswords: 	false
+                odbc: 	an ODBCThreadedConnection, dsn:OpenQwaqData, user:openqwaq, password:openqwaq (not connected) (open transaction)
+                objCache: 	a Dictionary()
+                dsn: 	'OpenQwaqData'
+                password: 	'openqwaq'
+                username: 	'openqwaq'
+[] in QSStorageODBC&gt;&gt;execute:args:
+        Receiver: a QSStorageODBC
+        Arguments and temporary variables: 
+                query: 	'SELECT * FROM servers WHERE pool = ?'
+                args: 	#('')
+                retry: 	3
+                ex: 	Error: Call to external function failed
+
+etc...</pre>
+
+<p>Which told me at least that the problem was with the ODBC database. From the “(not connected)” part it seemed as though the connection might not be being made properly and this seemed most likely.</p>
+
+<pre>isql -v OpenQwaqData openqwaq openqwaq</pre>
+
+<p>However, showed me that I could connect to the database from outside the squeak smalltalk environment so the problem had to be elsewhere. isql even ran the query</p>
+
+<div class="highlight"><pre><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">servers</span> <span class="k">WHERE</span> <span class="n">pool</span> <span class="o">=</span> <span class="s1">''</span>
+</pre></div>
+
+
+<p>Which is what the trace showed the openqwaq server was trying to do when it failed. This, then seemed as though squeak was not able to talk to ODBC. Sure enough setting up ODBC to log accesses:</p>
+
+<div class="highlight"><pre>sudo vi /etc/odbcinst.ini
+    <span class="o">[</span>ODBC<span class="o">]</span>
+    <span class="nv">TraceFile</span> <span class="o">=</span> /tmp/odbc.log
+    <span class="nv">Trace</span> <span class="o">=</span> Yes
+</pre></div>
+
+
+<p>showed that <code>isql</code> was talking to odbc as expected but odbc was not hearing a squeak out of the openqwaq server.</p>
+
+<p>In response to a call out to the openQwaq forum Barbara Hohensee pointed me to another Ubuntu <a href="https://sites.google.com/site/openqwaquserpraxisguide/home/advanced-user-guides/openqwaq-test-server-ubuntu">OpenQwaq page, here,</a> that you might want to look over.</p>
     </div>
   </article><div class="comments" id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
@@ -244,11 +294,11 @@ sudo chkconfig postfix 3
       </h2>
       <ol>
 <li>
-<a href="/2011/11/google-notebook.html">Replacing Google Notebook</a> <span>Oct 11</span>
+<a href="/2011/11/google-notebook.html">Replacing Google Notebook</a> <span>Nov 10</span>
 </li>
           
           <li>
-<a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>May 11</span>
+<a href="/2011/11/satisfying-blog.html">The World's Most Satisfying Blogging Platform</a> <span>Nov  5</span>
 </li>
           
       </ol>
@@ -283,7 +333,17 @@ sudo chkconfig postfix 3
 
   <!-- JavaScript at the bottom for fast page loading -->
   <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis:400,800" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/js/clearbox.js?dir=/js/clearbox" charset="UTF-8"></script><!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
+<script type="text/javascript" src="/js/clearbox.js?dir=/js/clearbox" charset="UTF-8"></script><!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --><script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script><script language="javascript" src="/js/jquery.tweet.js" type="text/javascript"></script><script type="text/javascript">
+      jQuery(function($){
+          $(".tweet").tweet({
+              username: "ruemeese",
+              avatar_size: 32,
+              count: 5,
+              query: "ruemeese || #de2011",
+              loading_text: "loading tweets..."
+          });
+      });
+  </script><!-- scripts concatenated and minified via build script --><script defer src="/js/plugins.js"></script><script defer src="/js/script.js"></script><!-- end scripts --><script>
     window._gaq = [['_setAccount','UA-2613906-11'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({
       load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

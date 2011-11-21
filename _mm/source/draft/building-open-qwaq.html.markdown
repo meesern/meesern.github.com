@@ -1,6 +1,6 @@
 --- 
 title: "Building Open Qwaq"
-date: 07/11/2011
+date: 07/Nov/2011
 ---
 
 I have been tasked with building an openqwaq installation for Horizon Digital Economy Research to allow academics, researchers and collaborators to communicate in a virtual space. 
