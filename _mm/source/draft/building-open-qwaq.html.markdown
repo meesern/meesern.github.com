@@ -220,5 +220,14 @@ Which is what the trace showed the openqwaq server was trying to do when it fail
     
 showed that `isql` was talking to odbc as expected but odbc was not hearing a squeak out of the openqwaq server.
 
-In response to a call out to the openQwaq forum Barbara Hohensee pointed me to another Ubuntu [OpenQwaq page, here,](https://sites.google.com/site/openqwaquserpraxisguide/home/advanced-user-guides/openqwaq-test-server-ubuntu) that you might want to look over.
+In response to a call out to the openQwaq forum Barbara Hohensee pointed me to another Ubuntu [OpenQwaq page, here,](https://sites.google.com/site/openqwaquserpraxisguide/home/advanced-user-guides/openqwaq-test-server-ubuntu) that you might want to look over.  It lead me to install additional odbc packages that are only available as RPM and consequently require 'alien' as an RPM to dpkg manager.  This can be installed through apt-get.
+
+    :::bash
+    wget ftp://ftp.pbone.net/mirror/dev.mysql.com/pub/Downloads/Connector-ODBC/3.51/mysql-connector-odbc-3.51.27-0.i386.rpm
+    wget ftp://ftp.pbone.net/mirror/dev.mysql.com/pub/Downloads/Connector-ODBC/5.1/mysql-connector-odbc-5.1.8-0.i386.rpm
+
+    sudo apt-get install alien dpkg-dev debhelper build-essential
+
+    alien 
+
 
