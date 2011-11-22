@@ -43,7 +43,7 @@ Evernote has a nice professional look and good import from notebook.  It's separ
 Conclusion
 ==========
 
-The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I have settled for Evernote but there is something quite unlikeable about the interface.  A good layout should feel like it is not there. Evernote rather feels like the layou gets in the way of the actual notes and with every one I write I am aware that there is not export functionality and so I am getting tied in.
+The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I have settled for Evernote but there is something quite unlikeable about the interface.  A good layout should feel like it is not there. Evernote rather feels like the layou gets in the way of the actual notes and with every one I write I am aware that there is not export functionality and so I am getting tied in.  Worse than all of that in the few days that I have been trying it I have lost important information.  There is an auto-save feature but I suspect that if you move away from a note without either saving or waiting for the autosave to kick in, then the edit is silently lost.  For me a notebook that looses your notes is not a good thing to be using.  It's like writing in a notebook and then turning back the page to discover that what you wrote has disappeared.  In general the whole notion of needing to save a file is becoming quite last century.  For a notebook the idea of save or loose it makes no sense at all.
 
 
 [un]: (http://www.ubernote.com)

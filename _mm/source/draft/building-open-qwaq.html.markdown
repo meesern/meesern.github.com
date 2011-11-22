@@ -228,6 +228,9 @@ In response to a call out to the openQwaq forum Barbara Hohensee pointed me to a
 
     sudo apt-get install alien dpkg-dev debhelper build-essential
 
-    alien 
+    sudo alien mysql-connector-odbc-3.51.27-0.i386.rpm
+    sudo dpkg -i mysql-connector-odbc_3.51.27-1_i386.deb
+    sudo alien mysql-connector-odbc-5.1.8-0.i386.rpm
+    sudo dpkg -i mysql-connector-odbc_5.1.8-1_i386.deb
 
 
