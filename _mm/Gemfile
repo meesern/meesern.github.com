@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 gem "middleman"
 gem "middleman-blog"
+gem "middleman-smusher"
 gem "rack-codehighlighter"
 gem "compass-susy-plugin"
 gem "rb-fsevent"

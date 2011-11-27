@@ -19,6 +19,7 @@ configure :build do
   
   # Enable cache buster
   # activate :cache_buster
+  activate :smusher
 end
 
 require 'rack/codehighlighter'
@@ -27,4 +28,23 @@ use Rack::Codehighlighter,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
+
+
+module Middleman::Features::Reference
+  class << self
+    def registered(app)
+      app.extend ClassMethods
+    end
+    alias :included :registered
+  end
+
+  module ClassMethods
+    def say_hello
+      puts "Hello"
+    end
+  end
+end
+
+
+activate :reference
 

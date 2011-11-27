@@ -43,7 +43,7 @@ Evernote has a nice professional look and good import from notebook.  It's separ
 Conclusion
 ==========
 
-The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I have settled for Evernote but there is something quite unlikeable about the interface.  A good layout should feel like it is not there. Evernote rather feels like the layou gets in the way of the actual notes and with every one I write I am aware that there is not export functionality and so I am getting tied in.
+The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I have settled for Evernote but there is something quite unlikeable about the interface.  A good layout should feel like it is not there. Evernote rather feels like the layout gets in the way of the actual notes and with every one I write I am aware that there is not export functionality and so I am getting tied in.
 
 
 [un]: (http://www.ubernote.com)

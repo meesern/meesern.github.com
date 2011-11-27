@@ -26,7 +26,8 @@
 header {
   clear: both;
   margin-left: 1.37%;
-  margin-right: 1.37%; }
+  margin-right: 1.37%;
+  margin-bottom: 24px; }
   header #hdr_img {
     display: inline;
     float: left;
@@ -40,13 +41,43 @@ header {
     float: left;
     width: 39.726%;
     margin-right: 1.37%;
-    margin-top: 2px; }
+    margin-top: 2px;
+    margin-bottom: 8px; }
   header h2 {
     display: inline;
     float: left;
     width: 23.288%;
     margin-right: 1.37%;
     margin-top: 24px; }
+
+.clear {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both; }
+
+#navbar {
+  padding-top: 0px;
+  margin-bottom: -10px;
+  padding-left: 7px; }
+
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1; }
+  #navbar ul li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    display: -moz-inline-box;
+    -moz-box-orient: vertical;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    white-space: nowrap; }
+    #navbar ul li {
+      *display: inline; }
 
 #minor {
   clear: both;
@@ -504,20 +535,30 @@ pre {
   -khtml-border-radius: 2px;
   border-radius: 2px; }
 
-.entry-content img {
+.entry-content img, .bodyimg {
   width: 100%;
   height: auto;
   margin-top: 13px;
   margin-bottom: 13px;
-  -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
-  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
-  -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
-  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px; }
+  border-radius: 4px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  -o-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px; }
+
+.smallbodyimg {
+  width: 33%;
+  height: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  -moz-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  -o-box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px;
+  box-shadow: rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px; }
 
 /* ~~~~~~~~~Header~~~~~~~~~ */
 header {
-  height: 126px;
-  background-color: #eee8d5;
   -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
   -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
   -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
@@ -528,6 +569,7 @@ header {
   -ms-border-radius: 4px;
   -khtml-border-radius: 4px;
   border-radius: 4px;
+  background-color: #eee8d5;
   background-image: url(/img/rue-stampt-m.png);
   background-repeat: no-repeat;
   background-position: 96% 90%; }
@@ -538,6 +580,33 @@ header {
     font-family: 'Terminal Dosis';
     font-weight: 400;
     font-size: 1em; }
+
+#navbar li {
+  -moz-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -o-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 4px; }
+
+#navbar li:hover {
+  color: #2aa198;
+  -moz-box-shadow: white 0 1px 0, rgba(10, 40, 37, 0.3) 0 1px 6px 0px;
+  -webkit-box-shadow: white 0 1px 0, rgba(10, 40, 37, 0.3) 0 1px 6px 0px;
+  -o-box-shadow: white 0 1px 0, rgba(10, 40, 37, 0.3) 0 1px 6px 0px;
+  box-shadow: white 0 1px 0, rgba(10, 40, 37, 0.3) 0 1px 6px 0px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px; }
 
 /* ~~~~~~~~~Aside~~~~~~~~~ */
 aside {
