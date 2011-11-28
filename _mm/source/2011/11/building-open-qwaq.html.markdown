@@ -1,8 +1,15 @@
 --- 
 title: "Building Open Qwaq"
-date: 07/Nov/2011
+date: 28/Nov/2011
 ---
 
+A failed attempt
+----------------
+
+This post documents a _failed_ attempt to build openqwaq for ubuntu.  I got far enough for it to be of value for anyone else who attempts this and _perhaps_ you will get different and better results.  Skip down to the last paragraphs if you just want to understand at what point the attempt failed.
+
+An optimistic start
+-------------------
 I have been tasked with building an openqwaq installation for Horizon Digital Economy Research to allow academics, researchers and collaborators to communicate in a virtual space. 
 
 Openqwaq is a Google code project with a dense homepage here: <http://code.google.com/p/openqwaq/>. The installation instructions are on the project wiki and the Linux installation here: [DetailedLinuxInstructions](http://code.google.com/p/openqwaq/wiki/detailedLinuxInstructions) shows an unsurprising number of dependencies and steps in the installation (unsurprising given the complexity of the immersive collaboration tools).  After thirty seconds of looking over the installation page it seemed to me that finding a virtual machine instance with everything already set up would be the best approach.  I found a couple of obscure references that suggested that Sugar Labs who make the Sugar children's learning environment had created a VM, but after some trawling through their website I came to the conclusion that it was merely part of their test environment.  
@@ -173,6 +180,9 @@ Now I moved on to configuring the server, still following the outline described 
 
 After that the server can test itself through the script at this page: `http://localhost/admin/servertest.php`
 
+Where it all goes wrong
+-----------------------
+
 At this point my server reported a 500 error response to the servertest.php indicating that all was not well.  Some investigation showed that this url was the first to be passed directly to the qwaq server.  Apache passes the request through a local proxy to ensure authentication then on to the OpenQwaq server.  The OpenQwaq server, in turn, is a Squeak smalltalk virtual machine. Error and access logs showed little in the way of what was going wrong.
 
 I started to get somewhere once I looked directly into the server at this URL: `http://localhost:9991/forums/testServer`  Which gave the same 500 error response but this time with all the additional information that one needs to make sense of the problem.  In this case it looked something like this:
@@ -232,5 +242,7 @@ In response to a call out to the openQwaq forum Barbara Hohensee pointed me to a
     sudo dpkg -i mysql-connector-odbc_3.51.27-1_i386.deb
     sudo alien mysql-connector-odbc-5.1.8-0.i386.rpm
     sudo dpkg -i mysql-connector-odbc_5.1.8-1_i386.deb
+
+Sadly though none of that had any effect on the problem and so I thought I would post this now.  My current plan is to start again with a new VM and use CentOS in place of ubuntu as per the original instructions.  Hopefully with all of the learning I've done it will be a breeze.
 
 
