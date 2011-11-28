@@ -19,7 +19,14 @@
 </head>
 <body>
   <div id="container">
-    <header><div id="hdr_img">
+    <header><div id="navbar">
+      <ul>
+<a href="/"><li>home</li></a>
+        <a href="/about.html"><li>about</li></a>
+        <a href="/small-thoughts.html"><li>small thoughts</li></a>
+      </ul>
+</div>
+    <div id="hdr_img">
       <a href="/">
         <img src="/img/output-on-switch-80.png"></a>
     </div>
@@ -31,6 +38,7 @@
     <h2>
     Rupert Meese's Blog of Software, Ruby, Metaphor and Machine Psychophenomenology Goodness 
     </h2>
+    <div class="clear"></div>
     </header><div id="minor">
       <div class="tweet"></div>
     </div>
@@ -45,11 +53,15 @@
 </h1>
     
     <div class="entry-content">
-      <p>So I have a vision for my blog of using a single writing format to create blog posts and academic papers. I use <a href="http://maruku.rubyforge.org/index.html">Maruku</a> in my blog to convert the elegantly formatted text files which I write into elegantly formatted HTML files which go on the web (see <a href="/2011/11/satisfying-blog.html">The World’s Most Satisfying Blog</a>. Pleasantly Maruku supports export to Latex making the possibility of the transition from blog post to academic paper seem plausible. The single biggest issue to solve is making references elegant.</p>
+      <p>So I have a vision for my blog of using a single writing format to create blog posts and academic papers. I use <a href="http://maruku.rubyforge.org/index.html">Maruku</a> in my blog to convert elegantly formatted text files into elegantly formatted HTML files for the web (see <a href="/2011/11/satisfying-blog.html">The World’s Most Satisfying Blog</a>. Pleasantly Maruku supports export to Latex making the possibility of the transition from blog post to academic paper seem plausible. The single biggest issue to solve is making references elegant.</p>
 
 <h2 id="the_ideal">The ideal</h2>
 
 <p>What I would like is to gather references for the books and articles that I read in a simple and accessible system. Preferably with the absolute minimum of tedious and error prone typing. When I come to make reference to a source I want to be able to search through my catalog (preferably full text) to find the source that I have in mind and identify it by a simple knowable key - perhaps a composite of first author, year and number (e.g. <code>thibodeau201101</code> Then to include it in my article I would like to use a simple markup, perhaps like <code>[]{thibodeau201101}</code> and have that automatically create a footnote to the citation in the case of formatting to a web page, or a bibliographic entry in the case of formatting a paper.</p>
+
+<h2 id="the_state_of_the_art">The state of the art</h2>
+
+<p>There are a wealth of reference management solutions out there and a comprehensive <a href="http://en.wikipedia.org/wiki/Comparison_of_reference_management_software">comparison of reference management software here</a>. Frankly I find this kind of feature compasison dificult to navigate, but regardless it is a good list.</p>
 
 <h2 id="collecting_references">Collecting References</h2>
 
@@ -72,6 +84,10 @@
 <li>Click <code>Import BiBTeX File</code>.</li>
 </ul>
 <p>It’s a bit fiddly but it works.</p>
+
+<h2 id="knowing_what_ive_got">Knowing what I’ve got</h2>
+
+<p>The next step is finding the reference I want. Typically this involves searching through the pdfs or web for the relevant and half remebered section. Of course citeulike does not gather full text pdfs.</p>
 
 <h2 id="citing">Citing</h2>
 

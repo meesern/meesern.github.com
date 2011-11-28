@@ -17,6 +17,7 @@
 
 /* Set the base grid */
 @import "base"; /*includes susy*/
+@import "inline-block-list";
 
 #container {
   @include container;
@@ -26,6 +27,7 @@
 
 header {
   @include full;
+  margin-bottom: 24px;
   #hdr_img {
       @include columns(3);
       img {
@@ -36,11 +38,27 @@ header {
   h1 {
       @include columns(5);
       margin-top: 2px;
+      margin-bottom: 8px;
   }
   h2 {
     @include columns(3);
     margin-top: 24px;
   }
+}
+
+.clear {
+  @include clearfix;
+  clear: both;
+}
+
+#navbar {
+  padding-top: 0px;
+  margin-bottom: -10px;
+  padding-left: 7px;
+}
+
+#navbar ul {
+  @include inline-block-list;
 }
 
 #minor {
@@ -304,21 +322,35 @@ pre {
   @include border-radius(2px);
 }
 
-.entry-content img {
+.entry-content img, .bodyimg {
   width: 100%;
   height: auto;
   margin-top: 13px;
   margin-bottom: 13px;
-  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+  border-radius: 4px;
+  @include box-shadow(rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px );
+}
+
+.smallbodyimg {
+  width: 33%;
+  height: auto;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  border-radius: 4px;
+  @include box-shadow(rgba(255, 255, 255, 0.5) 0 1px 0, rgba(0, 0, 0, 0.4) 0 3px 6px 1px );
 }
 
 /* ~~~~~~~~~Header~~~~~~~~~ */
 
-header {
-  height: 126px;
-  background-color:  $base2;
-  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 6px 0px );
+@mixin glass-border( $shadow-tone: rgb(0,0,0) ) {
+  $shadow-colour: transparentize(darken($shadow-tone, 30%),0.7);
+  @include box-shadow(rgba(255, 255, 255, 1) 0 1px 0, $shadow-colour 0 1px 6px 0px );
   @include border-radius(4px);
+}
+
+header {
+  @include glass-border;
+  background-color:  $base2;
   background-image: url(/img/rue-stampt-m.png);
   background-repeat: no-repeat;
   background-position: 96% 90%;
@@ -333,6 +365,16 @@ header {
     font-weight: 400;
     font-size: 1em;
   }
+}
+
+#navbar li {
+  @include glass-border;
+  padding: 4px;
+  margin: 4px;
+}
+#navbar li:hover {
+  color: $cyan;
+  @include glass-border($cyan);
 }
 
 /* ~~~~~~~~~Aside~~~~~~~~~ */
