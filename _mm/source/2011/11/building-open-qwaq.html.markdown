@@ -24,9 +24,9 @@ Creating a base VM
 I started by creating a new clean VM with an 8G of dynamically expanding storage.  I base the VM on ubuntu as it has a lot of nice new technologies.  Juju is one of the latest (2011), it provides recipe based deployment and for those who know rails it is somewhat similar to capistrano. I downloaded the ubuntu 11.10 32bit  ISO from here:  <http://www.ubuntu.com/download/ubuntu/download> then ran my new blank VM.  VirtualBox helpfully sees that there is no operating system installed and asks for the ISO image location to install the OS from (you have to click the folder-with-green-arrow icon). 
 
     Username: coll-admin 
-    Password: admin 
+    Password: ****** 
     
-If you use the image you should change this (I did of course!). As the VM was intended to be a remote server my plan was to have the desktop GUI available during installation (it's handy to have a bunch of terminals and a web browser) and then strip it out once the system was close to finished in order to reduce the image size.
+As the VM was intended to be a remote server my plan was to have the desktop GUI available during installation (it's handy to have a bunch of terminals and a web browser) and then strip it out once the system was close to finished in order to reduce the image size.
 
 Installing openqwaq on ubuntu 11.10
 -----------------------------------
@@ -40,12 +40,12 @@ http://code.google.com/p/openqwaq/wiki/detailedLinuxInstructions
     sudo apt-get install php5-odbc 
 
 
-When prompted I set the SQL root password to 'openqwaq'. If you use the VM you should change this.
+When prompted I set the SQL root password. *Horizon Specific*
 
     :::bash
     sudo apt-get install postfix 
 
-Set up as 'internet' and with mail from col.horizon.ac.uk. *Change This!*
+Set up as 'internet' and with mail from col.horizon.ac.uk. *Horizon Specific*
 
     :::bash
     sudo apt-get install ntp 
@@ -65,9 +65,9 @@ So that's the basic packages installed. Next is preparing for qwaq. First create
     sudo chmod 750 /home/openqwaq 
     sudo passwd openqwaq 
 
-The qwaq password is openqwaq. *Change This!*
+Password is *Horizon Specific*
 
-I prefer not to add this user to the sudoe's file but to keep a terminal open and run the sudo commands as the default user. Since I was initially within the University network and needing SVN to get through the proxy I set it in: *Change This!*
+I prefer not to add this user to the sudoe's file but to keep a terminal open and run the sudo commands as the default user. Since I was initially within the University network and needing SVN to get through the proxy I set it in the shell's `http_proxy` variable. *Horizon Specific*
 
     :::bash
     sudo vi /etc/subversion/servers 
@@ -176,7 +176,7 @@ Next I configure to start on boot.  This is confounded in Ubuntu because startup
     sudo chkconfig OpenQwaq-tunnel 3
     sudo chkconfig postfix 3
 
-Now I moved on to configuring the server, still following the outline described in detailedLinuxInstructions.  On the VM I opened `http://localhost/admin/serverconf.php?server=localhost`  If you are using the VM you should do this also and set appropriate email addresses.  I set mine to rupert.meese@nottingham.ac.uk.  *Change this!*
+Now I moved on to configuring the server, still following the outline described in detailedLinuxInstructions.  On the VM I opened `http://localhost/admin/serverconf.php?server=localhost`  and set the email address. *Horizon Specific*
 
 After that the server can test itself through the script at this page: `http://localhost/admin/servertest.php`
 
@@ -213,7 +213,7 @@ I started to get somewhere once I looked directly into the server at this URL: `
     
 Which told me at least that the problem was with the ODBC database.  From the "(not connected)" part it seemed as though the connection might not be being made properly and this seemed most likely.
 
-    isql -v OpenQwaqData openqwaq openqwaq
+    isql -v OpenQwaqData openqwaq <password>
 
 However, showed me that I could connect to the database from outside the squeak smalltalk environment so the problem had to be elsewhere.  isql even ran the query
     
