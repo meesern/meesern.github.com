@@ -37,13 +37,18 @@ This looks most like Google notebook and has good readability, import from noteb
 [Evernote][ev]
 ----------
 
-Evernote has a nice professional look and good import from notebook.  It's separation into notebooks is passable but the privacy feel a little compromised by a prominent 'all notes' notebook.  By far the worst thing about Evernote is the readability.  It seems to be designed for a small number of large notes not a stream of smaller ones, and so while the stream of notes is visible it is not readable but rather compressed in tiny text down a thin column.  Evernote nearly made it!
+Evernote has a nice professional look and good import from notebook.  It's separation into notebooks is passable but the privacy feel a little compromised by a prominent 'all notes' notebook.  By far the worst thing about Evernote is the readability.  It seems to be designed for a small number of large notes not a stream of smaller ones, and so while the stream of notes is visible it is not readable but rather compressed in tiny text down a thin column.  
+
+One really cool thing about evernote is that I can install the app on my phone, take a photo of a journal article and have evernote upload the photo as a note.  This would be cool in itself but evernote can search the text in the photo!  This makes it a really useful way of writing in the margins of other people's books!
+
+Evernote nearly made it to brilliant!
 
 
 Conclusion
 ==========
 
 The sad conclusion is that there does not seem to be a useful alternative to Google Notebook.  I have settled for Evernote but there is something quite unlikeable about the interface.  A good layout should feel like it is not there. Evernote rather feels like the layout gets in the way of the actual notes and with every one I write I am aware that there is no export functionality and so I am getting tied in.  Worse than all of that in the few days that I have been trying it I have lost important information.  There is an auto-save feature but I suspect that if you move away from a note without either saving or waiting for the autosave to kick in, then the edit is silently lost.  For me a notebook that looses your notes is not a good thing to be using.  It's like writing in a notebook and then turning back the page to discover that what you wrote has disappeared.  In general the whole notion of needing to save a file is becoming quite last century.  For a notebook the idea of save or loose it makes no sense at all.
+
 
 [un]: (http://www.ubernote.com)
 [zh]: (http://notebook.zoho.com)
