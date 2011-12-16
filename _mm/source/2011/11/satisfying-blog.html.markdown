@@ -1,5 +1,5 @@
 --- 
-title:  The World's Most Satisfying Blogging Platform
+title:  In Search of a Satisfying Blog Platform
 date:   05/Nov/2011
 tags:   software, other
 ---
