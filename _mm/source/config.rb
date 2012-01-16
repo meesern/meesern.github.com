@@ -1,3 +1,6 @@
+#
+# DON'T USE THIS ONE, USE THE ONE IN THE UPPER DIRECTORY!
+#
 require 'susy'
 # Require any additional compass plugins here.
 
@@ -24,17 +27,4 @@ relative_assets = true
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-
-# I can write extensions here or in external code and require it here which is nice
-
-module Drafting
-  class << self
-    def drafts
-      []
-    end
-  end
-end
-
-activate Drafting
-
 
