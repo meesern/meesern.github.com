@@ -44,7 +44,36 @@ module Middleman::Features::Reference
     end
   end
 end
-
-
 activate :reference
+
+module Middleman::Features::MyHelpers
+  class << self
+    def registered(app)
+      app.helpers HelperMethods
+    end
+    alias :included :registered
+  end
+
+  module HelperMethods
+    def custom_side_image
+      %Q|style="background-image: url(/img/#{side_image})"| if side_image?
+    end
+
+    def current_article
+      data.blog.articles.find {|a| a.title == current_article_title }
+    end
+
+    def side_image?
+      !side_image.blank?
+    end
+
+    def side_image
+      current_article.sideimage if is_blog_article?
+    end
+  end
+
+end
+activate :my_helpers
+
+
 
