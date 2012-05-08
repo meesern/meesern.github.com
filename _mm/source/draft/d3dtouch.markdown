@@ -12,6 +12,8 @@ The ceramics designers at [CSM](http://www.csm.arts.ac.uk/research/) develop des
 
 While we in the dark halls of the Geospatial Building aim to make sure that the feducials are machine readable.
 
+Much of the discussion boils down to how the recognition can distinguish between a 
+
 
 A Header
 ========
